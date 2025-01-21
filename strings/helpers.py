@@ -1,155 +1,155 @@
-HELP_1 = """🙄**<u>ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs:</u>**
+HELP_1 = """🙄**<u>Perintah Admin:</u>**
 
-ᴊᴜsᴛ ᴀᴅᴅ **ᴄ** ɪɴ ᴛʜᴇ sᴛᴀʀᴛɪɴɢ ᴏғ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜsᴇ ᴛʜᴇᴍ ғᴏʀ ᴄʜᴀɴɴᴇʟ.
+Tambahkan **c** di awal perintah untuk menggunakannya untuk saluran.
 
-/pause : ᴩᴀᴜsᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.
-/resume : ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴩᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ.
-/mute : ᴍᴜᴛᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.
-/unmute : ᴜɴᴍᴜᴛᴇ ᴛʜᴇ ᴍᴜᴛᴇᴅ sᴛʀᴇᴀᴍ.
-/skip : sᴋɪᴩ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ ᴀɴᴅ sᴛᴀʀᴛ sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ɴᴇxᴛ ᴛʀᴀᴄᴋ ɪɴ ǫᴜᴇᴜᴇ.
-/end ᴏʀ /stop : ᴄʟᴇᴀʀs ᴛʜᴇ ǫᴜᴇᴜᴇ ᴀɴᴅ ᴇɴᴅ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.
-/shuffle : sʜᴜғғʟᴇ ᴛʜᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs.
-/seek : sᴇᴇᴋ ᴛʜᴇ sᴛʀᴇᴀᴍ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴅᴜʀᴀᴛɪᴏɴ.
-/seekback : ʙᴀᴄᴋᴡᴀʀᴅ sᴇᴇᴋ ᴛʜᴇ sᴛʀᴇᴀᴍ ᴛᴏ ᴛʜᴇ ᴛʜᴇ ɢɪᴠᴇɴ ᴅᴜʀᴀᴛɪᴏɴ.
-/reboot : ʀᴇʙᴏᴏᴛs ᴛʜᴇ ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ.
+/pause : Jeda streaming yang sedang diputar.
+/resume : Lanjutkan streaming yang dijeda.
+/mute : Bisukan streaming yang sedang diputar.
+/unmute : Bunyikan streaming yang dibisukan.
+/skip : Lewati streaming yang sedang diputar dan mulai streaming lagu berikutnya dalam antrean.
+/end atau /stop : Hapus antrean dan akhiri streaming yang sedang diputar.
+/shuffle : Acak lagu dalam antrean.
+/seek : Cari streaming ke durasi yang diberikan.
+/seekback : Mundur cari streaming ke durasi yang diberikan.
+/reboot : Mulai ulang bot untuk obrolan Anda.
 
-🥴<u>**ʟᴏᴏᴩ ᴩʟᴀʏ :**</u>
+🥴<u>**Putar Ulang:</u>**
 
-/loop [ᴅɪsᴀʙʟᴇ/ᴇɴᴀʙʟᴇ] ᴏʀ [ʙᴇᴛᴡᴇᴇɴ 1:10] 
-    : ᴡʜᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʙᴏᴛ ᴡɪʟʟ ᴩʟᴀʏ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ ɪɴ ʟᴏᴏᴩ ғᴏʀ 10 ᴛɪᴍᴇs ᴏʀ ᴛʜᴇ ɴᴜᴍʙᴇʀ ᴏғ ʀᴇǫᴜᴇsᴛᴇᴅ ʟᴏᴏᴩs.
+/loop [disable/enable] atau [antara 1:10] 
+    : Ketika diaktifkan, bot akan memutar streaming yang sedang diputar dalam loop sebanyak 10 kali atau jumlah loop yang diminta.
 
-😜<u>**ᴀᴜᴛʜ ᴜsᴇʀs :**</u>
+😜<u>**Pengguna Auth:</u>**
 
-ᴀᴜᴛʜ ᴜsᴇʀs ᴄᴀɴ ᴜsᴇ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ᴛʜᴇ ʙᴏᴛ ᴡɪᴛʜᴏᴜᴛ ᴀᴅᴍɪɴ ʀɪɢʜᴛs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+Pengguna auth dapat menggunakan hak admin di bot tanpa hak admin di obrolan.
 
-/auth [ᴜsᴇʀɴᴀᴍᴇ] : ᴀᴅᴅ ᴀ ᴜsᴇʀ ᴛᴏ ᴀᴜᴛʜ ʟɪsᴛ ᴏғ ᴛʜᴇ ʙᴏᴛ.
-/unauth [ᴜsᴇʀɴᴀᴍᴇ] : ʀᴇᴍᴏᴠᴇ ᴀ ᴀᴜᴛʜ ᴜsᴇʀs ғʀᴏᴍ ᴛʜᴇ ᴀᴜᴛʜ ᴜsᴇʀs ʟɪsᴛ.
-/authusers : sʜᴏᴡs ᴛʜᴇ ᴀᴜᴛʜ ᴜsᴇʀs ʟɪsᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴩ."""
-
-
-HELP_2 = """💞<u>**ᴩʟᴀʏ ᴄᴏᴍᴍᴀɴᴅs:**</u>
-
-ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs = play , vplay , cplay
-
-ғᴏʀᴄᴇᴩʟᴀʏ ᴄᴏᴍᴍᴀɴᴅs = playforce , vplayforce , cplayforce
-
-**c** sᴛᴀɴᴅs ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴩʟᴀʏ.
-**v** sᴛᴀɴᴅs ғᴏʀ ᴠɪᴅᴇᴏ ᴩʟᴀʏ.
-**force** sᴛᴀɴᴅs ғᴏʀ ғᴏʀᴄᴇ ᴩʟᴀʏ.
-
-/play ᴏʀ /vplay ᴏʀ /cplay  : sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀᴀᴄᴋ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.
-
-/playforce ᴏʀ /vplayforce ᴏʀ /cplayforce :  **ғᴏʀᴄᴇ ᴩʟᴀʏ** sᴛᴏᴩs ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ ᴀɴᴅ sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀᴀᴄᴋ.
-
-/channelplay [ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ] ᴏʀ [ᴅɪsᴀʙʟᴇ] : ᴄᴏɴɴᴇᴄᴛ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀ ɢʀᴏᴜᴩ ᴀɴᴅ sᴛᴀʀᴛs sᴛʀᴇᴀᴍɪɴɢ ᴛʀᴀᴄᴋs ʙʏ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴄᴏᴍᴍᴀɴᴅs sᴇɴᴛ ɪɴ ɢʀᴏᴜᴩ.
+/auth [username] : Tambahkan pengguna ke daftar auth bot.
+/unauth [username] : Hapus pengguna dari daftar auth.
+/authusers : Tampilkan daftar pengguna auth bot."""
 
 
-🤨**<u>sᴇʀᴠᴇʀ ᴩʟᴀʏʟɪsᴛs:</u>**
+HELP_2 = """💞<u>**Perintah Putar:</u>**
 
-/playlist  : ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴩʟᴀʏʟɪsᴛ ᴏɴ sᴇʀᴠᴇʀs.
-/deleteplaylist : ᴅᴇʟᴇᴛᴇ ᴀɴʏ sᴀᴠᴇᴅ ᴛʀᴀᴄᴋ ɪɴ ʏᴏᴜʀ ᴩʟᴀʏʟɪsᴛ.
-/play  : sᴛᴀʀᴛs ᴩʟᴀʏɪɴɢ ғʀᴏᴍ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴩʟᴀʏʟɪsᴛ ᴏɴ sᴇʀᴠᴇʀ."""
+Perintah yang tersedia = play, vplay, cplay
+
+Perintah forceplay = playforce, vplayforce, cplayforce
+
+**c** berarti putar saluran.
+**v** berarti putar video.
+**force** berarti putar paksa.
+
+/play atau /vplay atau /cplay  : Mulai streaming lagu yang diminta di videochat.
+
+/playforce atau /vplayforce atau /cplayforce : **Putar paksa** menghentikan streaming yang sedang berlangsung dan mulai streaming lagu yang diminta.
+
+/channelplay [username obrolan atau id] atau [disable] : Hubungkan saluran ke grup dan mulai streaming lagu dengan bantuan perintah yang dikirim di grup.
 
 
-HELP_3 = """😉<u>**ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs:**</u>
+🤨**<u>Daftar Putar Server:</u>**
 
-/stats : ɢᴇᴛ ᴛᴏᴩ 10 ᴛʀᴀᴄᴋ ɢʟᴏʙᴀʟ sᴛᴀᴛs, ᴛᴏᴩ 10 ᴜsᴇʀs ᴏғ ᴛʜᴇ ʙᴏᴛ, ᴛᴏᴩ 10 ᴄʜᴀᴛs ᴏɴ ᴛʜᴇ ʙᴏᴛ, ᴛᴏᴩ 10 ᴩʟᴀʏᴇᴅ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ ᴀɴᴅ ᴍᴀɴʏ ᴍᴏʀᴇ...
-/sudolist : sʜᴏᴡs ᴛʜᴇ sᴜᴅᴏ ᴜsᴇʀs ᴏғ ᴍᴜsɪᴄ ʙᴏᴛ.
-/lyrics [sᴏɴɢ ɴᴀᴍᴇ] : sᴇᴀʀᴄʜ ʟʏʀɪᴄs ғᴏʀ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ sᴏɴɢ.
-/song [sᴏɴɢ ɴᴀᴍᴇ] or [ʏᴛ ʟɪɴᴋ] : ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴʏ ʏᴏᴜᴛᴜʙᴇ ᴛʀᴀᴄᴋ ɪɴ ᴀᴜᴅɪᴏ ᴏʀ ᴠɪᴅᴇᴏ ғᴏʀᴍᴀᴛ.
-/player :  ɢᴇᴛ ᴀ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ᴩʟᴀʏᴇʀ ᴩᴀɴᴇʟ.
-/queue : sʜᴏᴡs ᴛʜᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs ʟɪsᴛ."""
+/playlist  : Periksa daftar putar yang disimpan di server.
+/deleteplaylist : Hapus lagu yang disimpan dalam daftar putar.
+/play  : Mulai memutar dari daftar putar yang disimpan di server."""
 
-HELP_4 = """😴<u>**ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅs:**</u>
 
-/start : sᴛᴀʀᴛs ᴛʜᴇ ᴍᴜsɪᴄ ʙᴏᴛ.
-/help  : ɢᴇᴛ ʜᴇʟᴩ ᴍᴇɴᴜ ᴡɪᴛʜ ᴇxᴩʟᴀɴᴀᴛɪᴏɴ ᴏғ ᴄᴏᴍᴍᴀɴᴅs.
-/ping: sʜᴏᴡ ᴛʜᴇ ᴩɪɴɢ ᴀɴᴅ sʏsᴛᴇᴍ sᴛᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
+HELP_3 = """😉<u>**Perintah Bot:</u>**
 
-🧐<u>**ɢʀᴏᴜᴩ sᴇᴛᴛɪɴɢs:**</u>
-/settings : sʜᴏᴡs ᴛʜᴇ ɢʀᴏᴜᴩ sᴇᴛᴛɪɴɢs ᴡɪᴛʜ ᴀɴ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ɪɴʟɪɴᴇ ᴍᴇɴᴜ."""
+/stats : Dapatkan statistik global 10 lagu teratas, 10 pengguna teratas bot, 10 obrolan teratas bot, 10 lagu teratas yang diputar di obrolan, dan banyak lagi...
+/sudolist : Tampilkan pengguna sudo bot musik.
+/lyrics [nama lagu] : Cari lirik untuk lagu yang diminta.
+/song [nama lagu] atau [tautan yt] : Unduh lagu YouTube dalam format audio atau video.
+/player : Dapatkan panel pemutar interaktif.
+/queue : Tampilkan daftar lagu dalam antrean."""
 
-HELP_5 = """🥺**<u>ᴀᴅᴅ & ʀᴇᴍᴏᴠᴇ sᴜᴅᴏᴇʀs:</u>**
-/addsudo [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴜsᴇʀ]
-/delsudo [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴄʜᴜᴛɪʏᴀ.]
+HELP_4 = """😴<u>**Perintah Ekstra:</u>**
 
-🥶**<u>ʜᴇʀᴏᴋᴜ:</u>**
-/usage : sʜᴏᴡs ᴛʜᴇ ᴅʏɴᴏ ᴜsᴀɢᴇ ᴏғ ᴛʜᴇ ᴍᴏɴᴛʜ.
+/start : Mulai bot musik.
+/help  : Dapatkan menu bantuan dengan penjelasan perintah.
+/ping: Tampilkan ping dan statistik sistem bot.
 
-🤯**<u>ᴄᴏɴғɪɢ ᴠᴀʀɪᴀʙʟᴇs:</u>**
-/get_var : ɢᴇᴛ ᴀ ᴄᴏɴғɪɢ ᴠᴀʀ ғʀᴏᴍ ʜᴇʀᴏᴋᴜ ᴏʀ .ᴇɴᴠ.
-/del_var : ᴅᴇʟᴇᴛᴇ ᴀ ᴄᴏɴғɪɢ ᴠᴀʀ ᴏɴ ʜᴇʀᴏᴋᴜ ᴏʀ .ᴇɴᴠ.
-/set_var [ᴠᴀʀ ɴᴀᴍᴇ] [ᴠᴀʟᴜᴇ] : sᴇᴛ ᴏʀ ᴜᴩᴅᴀᴛᴇ ᴀ ᴄᴏɴғɪɢ ᴠᴀʀ ᴏɴ ʜᴇʀᴏᴋᴜ ᴏʀ .ᴇɴᴠ.
+🧐<u>**Pengaturan Grup:</u>
+/settings : Tampilkan pengaturan grup dengan menu inline interaktif."""
 
-🤖**<u>ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs:</u>**
-/restart : ʀᴇsᴛᴀʀᴛs ʏᴏᴜʀ ʙᴏᴛ.
-/update : ᴜᴩᴅᴀᴛᴇs ᴛʜᴇ ʙᴏᴛ ғʀᴏᴍ ᴛʜᴇ ᴜᴩsᴛʀᴇᴀᴍ ʀᴇᴩᴏ.
-/speedtest : ᴄʜᴇᴄᴋ ʙᴏᴛ's sᴇʀᴠᴇʀ sᴩᴇᴇᴅ.
-/maintenance [ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ] 
-/logger [ᴇɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ] : ʙᴏᴛ ᴡɪʟʟ sᴛᴀʀᴛ ʟᴏɢɢɪɴɢ ᴛʜᴇ ᴀᴄᴛɪᴠɪᴛɪᴇs ʜᴀᴩᴩᴇɴ ᴏɴ ʙᴏᴛ.
-/get_log [ɴᴜᴍʙᴇʀ ᴏғ ʟɪɴᴇs] : ɢᴇᴛ ʟᴏɢs ᴏғ ʏᴏᴜʀ ʙᴏᴛ [ᴅᴇғᴀᴜʟᴛ ᴠᴀʟᴜᴇ ɪs 100 ʟɪɴᴇs]
-/autoend [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ] : ᴇɴᴀʙʟᴇ sᴛʀᴇᴀᴍ ᴀᴜᴛᴏ ᴇɴᴅ ɪғ ɴᴏ ᴏɴᴇ ɪs ʟɪsᴛᴇɴɪɴɢ.
+HELP_5 = """🥺**<u>Tambah & Hapus Pengguna Sudo:</u>**
+/addsudo [username atau balas ke pengguna]
+/delsudo [username atau balas ke pengguna].
 
-🤑**<u>sᴛᴀᴛs ᴄᴏᴍᴍᴀɴᴅs:</u>**
-/activevoice : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛs ᴏɴ ᴛʜᴇ ʙᴏᴛ.
-/activevideo : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ᴏɴ ʙᴏᴛ.
-/stats : sʜᴏᴡs ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
+🥶**<u>Heroku:</u>**
+/usage : Tampilkan penggunaan dyno bulan ini.
 
-😒**<u>ʙʟᴀᴄᴋʟɪsᴛ ᴄʜᴀᴛ:</u>**
-/blacklistchat [ᴄʜᴀᴛ ɪᴅ] : ʙʟᴀᴄᴋʟɪsᴛ ᴀ ᴄʜᴀᴛ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ.
-/whitelistchat [ᴄʜᴀᴛ ɪᴅ] : ᴡʜɪᴛᴇʟɪsᴛ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛ.
-/blacklistedchat : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛs.
+🤯**<u>Variabel Konfigurasi:</u>**
+/get_var : Dapatkan variabel konfigurasi dari Heroku atau .env.
+/del_var : Hapus variabel konfigurasi di Heroku atau .env.
+/set_var [nama var] [nilai var] : Atur atau perbarui variabel konfigurasi di Heroku atau .env.
 
-😤**<u>ʙʟᴏᴄᴋ ᴜsᴇʀs:</u>**
-/block [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴄʜᴜᴛɪʏᴀ] : sᴛᴀʀᴛs ɪɢɴᴏʀɪɴɢ ᴛʜᴇ ᴄʜᴜᴛɪʏᴀ, sᴏ ᴛʜᴀᴛ ʜᴇ ᴄᴀɴ'ᴛ ᴜsᴇ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs.
-/unblock [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] : ᴜɴʙʟᴏᴄᴋs ᴛʜᴇ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀ.
-/blockedusers : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ʙʟᴏᴄᴋᴇᴅ ᴜsᴇʀs.
+🤖**<u>Perintah Bot:</u>**
+/restart : Mulai ulang bot Anda.
+/update : Perbarui bot dari repositori upstream.
+/speedtest : Periksa kecepatan server bot.
+/maintenance [enable/disable] 
+/logger [enable/disable] : Bot akan mulai mencatat aktivitas yang terjadi di bot.
+/get_log [jumlah baris] : Dapatkan log bot Anda [nilai default adalah 100 baris]
+/autoend [enable|disable] : Aktifkan auto end streaming jika tidak ada yang mendengarkan.
 
-🤬**<u>ɢʙᴀɴ ғᴇᴀᴛᴜʀᴇ:</u>**
-/gban [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴄʜᴜᴛɪʏᴀ] : ɢʟᴏʙᴀʟʟʏ ʙᴀɴs ᴛʜᴇ ᴄʜᴜᴛɪʏᴀ ғʀᴏᴍ ᴀʟʟ ᴛʜᴇ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴀɴᴅ ʙʟᴀᴄᴋʟɪsᴛ ʜɪᴍ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ.
-/ungban [ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴜsᴇʀ] : ɢʟᴏʙᴀʟʟʏ ᴜɴʙᴀɴs ᴛʜᴇ ɢʟᴏʙᴀʟʟʏ ʙᴀɴɴᴇᴅ ᴜsᴇʀ.
-/gbannedusers : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ɢʟᴏʙᴀʟʟʏ ʙᴀɴɴᴇʀ ᴜsᴇʀs.
+🤑**<u>Perintah Statistik:</u>**
+/activevoice : Tampilkan daftar voicechat aktif di bot.
+/activevideo : Tampilkan daftar videochat aktif di bot.
+/stats : Tampilkan statistik bot saat ini.
 
-🎥**<u>ᴠɪᴅᴇᴏᴄʜᴀᴛ ᴍᴏᴅᴇ:</u>**
-/set_video_limit [ɴᴜᴍʙᴇʀ ᴏғ ᴄʜᴀᴛs] : sᴇᴛ ᴛʜᴇ ᴍᴀxɪᴍᴜᴍ ɴᴜᴍʙᴇʀ ᴏғ ᴠɪᴅᴇᴏᴄʜᴀᴛs ᴀʟʟᴏᴡᴇᴅ ᴏɴ ʙᴏᴛ. [ᴅᴇᴀғᴜʟᴛ - 3]
-/videomode [ᴅᴏᴡɴʟᴏᴀᴅ|ᴍ3ᴜ8] : ɪғ ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴏᴅᴇ ɪs ᴇɴᴀʙʟᴇᴅ ʙᴏᴛ ᴡɪʟʟ ᴅᴏᴡɴʟᴏᴀᴅ ᴛʜᴇ ᴛʀᴀᴄᴋs ɪɴsᴛᴇᴀᴅ ᴏғ ᴩʟᴀʏɪɴɢ ᴛʜᴇᴍ ɪɴ ᴍ3ᴜ8.
+😒**<u>Blacklist Obrolan:</u>**
+/blacklistchat [chat id] : Blacklist obrolan dari menggunakan bot.
+/whitelistchat [chat id] : Whitelist obrolan yang di-blacklist.
+/blacklistedchat : Tampilkan daftar obrolan yang di-blacklist.
 
-💔**<u>ᴩʀɪᴠᴀᴛᴇ ʙᴏᴛ:</u>**
-/authorize [ᴄʜᴀᴛ ɪᴅ] : ᴀʟʟᴏᴡs ᴀ ᴄʜᴀᴛ ғᴏʀ ᴜsɪɴɢ ᴛʜᴇ ʙᴏᴛ.
-/unauthorize [ᴄʜᴀᴛ ɪᴅ] : ᴅɪsᴀʟʟᴏᴡs ᴛʜᴇ ᴀʟʟᴏᴡᴇᴅ ᴄʜᴀᴛ.
-/authorized : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀʟʟᴏᴡᴇᴅ ᴄʜᴀᴛs.
+😤**<u>Blokir Pengguna:</u>**
+/block [username atau balas ke pengguna] : Mulai mengabaikan pengguna, sehingga dia tidak bisa menggunakan perintah bot.
+/unblock [username atau balas ke pengguna] : Buka blokir pengguna yang diblokir.
+/blockedusers : Tampilkan daftar pengguna yang diblokir.
 
-🍒**<u>ʙʀᴏᴀᴅᴄᴀsᴛ ғᴇᴀᴛᴜʀᴇ:</u>**
-/broadcast [ᴍᴇssᴀɢᴇ ᴏʀ ʀᴇᴩʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ] : ʙʀᴏᴀᴅᴄᴀsᴛ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
+🤬**<u>Fitur Gban:</u>**
+/gban [username atau balas ke pengguna] : Ban global pengguna dari semua obrolan yang dilayani dan blacklist dia dari menggunakan bot.
+/ungban [username atau balas ke pengguna] : Buka ban global pengguna yang di-ban secara global.
+/gbannedusers : Tampilkan daftar pengguna yang di-ban secara global.
 
-<u>ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ᴍᴏᴅᴇs:</u>
-**-pin** : ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇs ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs.
-**-pinloud** : ᴩɪɴs ʏᴏᴜʀ ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ sᴇʀᴠᴇᴅ ᴄʜᴀᴛs ᴀɴᴅ sᴇɴᴅ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ᴍᴇᴍʙᴇʀs.
-**-user** : ʙʀᴏᴀᴅᴄᴀsᴛs ᴛʜᴇ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʜᴇ ᴜsᴇʀs ᴡʜᴏ ʜᴀᴠᴇ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.
-**-assistant** : ʙʀᴏᴀᴅᴄᴀsᴛ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴛʜᴇ ᴀssɪᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ ᴏғ ᴛʜᴇ ʙᴏᴛ.
-**-nobot** : ғᴏʀᴄᴇs ᴛʜᴇ ʙᴏᴛ ᴛᴏ ɴᴏᴛ ʙʀᴏᴀᴅᴄᴀsᴛ ᴛʜᴇ ᴍᴇssᴀɢᴇ..
+🎥**<u>Mode Videochat:</u>**
+/set_video_limit [jumlah obrolan] : Atur jumlah maksimum videochat yang diizinkan di bot. [default - 3]
+/videomode [download|m3u8] : Jika mode unduh diaktifkan, bot akan mengunduh lagu daripada memutarnya di m3u8.
 
-**ᴇxᴀᴍᴩʟᴇ:** `/broadcast -user -assistant -pin ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ`"""
+💔**<u>Bot Pribadi:</u>**
+/authorize [chat id] : Izinkan obrolan untuk menggunakan bot.
+/unauthorize [chat id] : Tidak mengizinkan obrolan yang diizinkan.
+/authorized : Tampilkan daftar obrolan yang diizinkan.
 
-HELP_7 = """💌**<u>ʜᴇʀᴇ ʏᴏᴜ ᴄᴀɴ ғɪɴᴅ ɴᴇᴡ ғᴇᴀᴛᴜʀᴇs:</u>**
+🍒**<u>Fitur Broadcast:</u>**
+/broadcast [pesan atau balas ke pesan] : Broadcast pesan ke obrolan yang dilayani bot.
 
-/alive : ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ᴀʟᴇxᴀ ᴍᴜsɪᴄ ʙᴏᴛ ɪs ᴀʟɪᴠᴇ ᴏʀ ɴᴏᴛ
-/id : ᴛᴏ ᴄʜᴇᴋ ᴜsᴇʀ ᴀɴᴅ ᴄʜᴀᴛ ɪᴅ
-/gcast -user -assistant -pin ᴛᴇsᴛɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ`
-/verify : ᴠᴇʀɪꜰʏ ʏᴏᴜʀsᴇʟꜰ ᴀᴛ ᴀʟᴇxᴀ ᴅᴀᴛᴀʙᴀsᴇ"""
+<u>Mode Broadcast:</u>
+**-pin** : Pin pesan yang dibroadcast di obrolan yang dilayani.
+**-pinloud** : Pin pesan yang dibroadcast di obrolan yang dilayani dan kirim notifikasi ke anggota.
+**-user** : Broadcast pesan ke pengguna yang telah memulai bot Anda.
+**-assistant** : Broadcast pesan dari akun asisten bot.
+**-nobot** : Paksa bot untuk tidak broadcast pesan.
 
-HELP_8 = """💰**<u>ꜰᴇᴀᴛᴜʀᴇ ꜰᴏʀ ʙʀᴏᴀᴅᴄᴀsᴛ sᴜʙsᴄʀɪᴘᴛɪᴏɴ:</u>**
+**Contoh:** `/broadcast -user -assistant -pin testing broadcast`"""
 
-ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ʙᴜʏ ᴍᴏɴᴛʜʟʏ ᴀɴᴅ ᴡᴇᴇᴋʟʏ ʙʀᴏᴀᴅᴄᴀsᴛ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ꜰʀᴏᴍ ᴜs. ᴡᴇ ᴡɪʟʟ ɢɪᴠᴇ ʏᴏᴜ 3 ʙʀᴏᴀᴅᴄᴀsᴛ ꜰᴏʀ ᴡᴇᴇᴋʟʏ ᴀɴᴅ 14 ʙʀᴏᴀᴅᴄᴀsᴛ ꜰᴏʀ ᴍᴏɴᴛʜʟʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʟɪᴍɪᴛ ᴏꜰ sᴇɴᴅɪɴɢ ʙʀᴏᴀᴅᴄᴀsᴛ ᴀꜰᴛᴇʀ ᴛᴡᴏ ᴅᴀʏs.
+HELP_7 = """💌**<u>Fitur Baru:</u>**
 
-**ᴏɴʟʏ ᴏᴡɴᴇʀ**
-/addweekly [ᴜsᴇʀ ɪᴅ] : ᴀᴅᴅ ᴜsᴇʀ ᴛᴏ ᴡᴇᴇᴋʟʏ ʙʀᴏᴀᴅᴄᴀsᴛ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.
-/addmonthly [ᴜsᴇʀ ɪᴅ] : ᴀᴅᴅ ᴜsᴇʀ ᴛᴏ ᴍᴏɴᴛʜʟʏ ʙʀᴏᴀᴅᴄᴀsᴛ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.  
-/removesub [ᴜsᴇʀ ɪᴅ] : ʀᴇᴍᴏᴠᴇ ᴜsᴇʀ ꜰʀᴏᴍ ʙʀᴏᴀᴅᴄᴀsᴛ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.
-/checksubscription [ᴜsᴇʀ ɪᴅ] : ᴄʜᴇᴋ ᴜsᴇʀ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ʀᴇᴍᴀɪɴɪɴɢ ᴅᴀʏs ᴀɴᴅ ʙʀᴏᴀᴅᴄᴀsᴛ.
-/substats : ᴄʜᴇᴄᴋ ᴛᴏᴛᴀʟ ɴᴜᴍʙᴇʀ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ᴡɪᴛʜ ᴛʜᴇɪʀ ɪᴅs ᴀɴᴅ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ᴛʏᴘᴇ ᴀʟᴏɴɢ ᴡɪᴛʜ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴜᴛ.
-/subscription_alert : ᴛᴏ sᴇɴᴅ ᴀʟᴇʀᴛ ᴍᴇssᴀɢᴇ ᴛᴏ sᴜʙsᴄʀɪʙᴇʀ ᴡɪᴛʜ ʀᴇᴍᴀɪɴɪɴɢ ᴅᴀʏs  ᴀʟᴏɴɢ ᴡɪᴛʜ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴜᴛ.
+/alive : Sekarang Anda dapat memeriksa apakah bot musik Alexa hidup atau tidak
+/id : Untuk memeriksa id pengguna dan obrolan
+/gcast -user -assistant -pin testing broadcast`
+/verify : Verifikasi diri Anda di database Alexa"""
 
-**ᴀɴʏᴏɴᴇ ᴄᴀɴ ᴜsᴇ**
-/mysubscription : ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴋ ʏᴏᴜʀ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ᴡɪᴛʜ ʀᴇᴍᴀɪɴɪɴɢ ᴅᴀʏs ᴀɴᴅ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴜɴᴛ.
-/paidbroadcast : sᴇɴᴅ ʙʀᴏᴀᴅᴄᴀsᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀʟʟ ᴜsᴇʀ ᴀɴᴅ ɢʀᴏᴜᴘs ᴀᴛ ᴀ ᴛɪᴍᴇ ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴀ ᴀᴄᴛɪᴠᴇ sᴜʙsᴄʀɪᴘᴛɪᴏɴ."""
+HELP_8 = """💰**<u>Fitur Langganan Broadcast:</u>**
+
+Sekarang Anda dapat membeli langganan broadcast bulanan dan mingguan dari kami. Kami akan memberikan Anda 3 broadcast untuk mingguan dan 14 broadcast untuk langganan bulanan dengan batas mengirim broadcast setelah dua hari.
+
+**Hanya Pemilik**
+/addweekly [user id] : Tambahkan pengguna ke langganan broadcast mingguan.
+/addmonthly [user id] : Tambahkan pengguna ke langganan broadcast bulanan.  
+/removesub [user id] : Hapus pengguna dari langganan broadcast.
+/checksubscription [user id] : Periksa sisa hari langganan pengguna dan jumlah broadcast.
+/substats : Periksa jumlah total langganan dengan id mereka dan jenis langganan bersama dengan jumlah broadcast.
+/subscription_alert : Kirim pesan peringatan ke pelanggan dengan sisa hari bersama dengan jumlah broadcast.
+
+**Siapa Saja Bisa Menggunakan**
+/mysubscription : Anda dapat memeriksa langganan Anda dengan sisa hari dan jumlah broadcast.
+/paidbroadcast : Kirim pesan broadcast ke semua pengguna dan grup sekaligus jika Anda memiliki langganan aktif."""
