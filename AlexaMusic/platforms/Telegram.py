@@ -54,9 +54,9 @@ class TeleAPI:
         try:
             file_name = file.file_name
             if file_name is None:
-                file_name = "Telagram audio file" if audio else "Telagram video file"
+                file_name = "File audio Telegram" if audio else "File video Telegram"
         except:
-            file_name = "Telagram audio file" if audio else "Telagram video file"
+            file_name = "File audio Telegram" if audio else "File video Telegram"
         return file_name
 
     async def get_duration(self, file):
@@ -141,7 +141,7 @@ class TeleAPI:
                     [
                         [
                             InlineKeyboardButton(
-                                text="🚦 Cancel downloading",
+                                text="🚦 Batalkan pengunduhan",
                                 callback_data="stop_downloading",
                             ),
                         ]
@@ -160,14 +160,14 @@ class TeleAPI:
                     completed_size = convert_bytes(current)
                     speed = convert_bytes(speed)
                     text = f"""
-**{app.mention} Telagram Media Downloader**
+**{app.mention} Pengunduh Media Telegram**
 
-**Total file size:** {total_size}
-**Completed:** {completed_size} 
-**Percentage:** {percentage[:5]}%
+**Ukuran total file:** {total_size}
+**Selesai:** {completed_size} 
+**Persentase:** {percentage[:5]}%
 
-**Speed:** {speed}/s
-**Elapsed Time:** {eta}"""
+**Kecepatan:** {speed}/s
+**Waktu yang berlalu:** {eta}"""
                     try:
                         await mystic.edit_text(text, reply_markup=upl)
                     except:
@@ -186,7 +186,7 @@ class TeleAPI:
                     progress=progress,
                 )
                 await mystic.edit_text(
-                    "Sucessfully Downloaded\n Processing File Now..."
+                    "Berhasil Diunduh\n Memproses File Sekarang..."
                 )
                 downloader.pop(message.id, None)
             except:

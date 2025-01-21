@@ -41,7 +41,7 @@ BOT_ID = getenv("BOT_ID")
 
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/TheTeamAlexa/AlexaMusic")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/kotakbiasa/DeltaMusic")
 
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -49,7 +49,7 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Alexa_BotUpdates")
 
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/Alexa_Help")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/DeltaMusicChat")
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
 
@@ -67,7 +67,7 @@ YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
 
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/TheTeamAlexa/AlexaMusic")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/kotakbiasa/DeltaMusic")
 
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
 
@@ -183,28 +183,28 @@ SONG_DOWNLOAD_DURATION_LIMIT = int(time_to_seconds(f"{SONG_DOWNLOAD_DURATION}:00
 if SUPPORT_CHANNEL:
     if not re.match("(?:http|https)://", SUPPORT_CHANNEL):
         print(
-            "[ERROR] - Your SUPPORT_CHANNEL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL SUPPORT_CHANNEL Anda salah. Pastikan dimulai dengan https://"
         )
         sys.exit()
 
 if SUPPORT_GROUP:
     if not re.match("(?:http|https)://", SUPPORT_GROUP):
         print(
-            "[ERROR] - Your SUPPORT_GROUP url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL SUPPORT_GROUP Anda salah. Pastikan dimulai dengan https://"
         )
         sys.exit()
 
 if UPSTREAM_REPO:
     if not re.match("(?:http|https)://", UPSTREAM_REPO):
         print(
-            "[ERROR] - Your UPSTREAM_REPO url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL UPSTREAM_REPO Anda salah. Pastikan dimulai dengan https://"
         )
         sys.exit()
 
 if GITHUB_REPO:
     if not re.match("(?:http|https)://", GITHUB_REPO):
         print(
-            "[ERROR] - Your GITHUB_REPO url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL GITHUB_REPO Anda salah. Pastikan dimulai dengan https://"
         )
 
 
@@ -212,7 +212,7 @@ if PING_IMG_URL:
     if PING_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
             print(
-                "[ERROR] - Your PING_IMG_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL PING_IMG_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()
 
@@ -220,7 +220,7 @@ if PLAYLIST_IMG_URL:
     if PLAYLIST_IMG_URL != "assets/Playlist.jpeg":
         if not re.match("(?:http|https)://", PLAYLIST_IMG_URL):
             print(
-                "[ERROR] - Your PLAYLIST_IMG_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL PLAYLIST_IMG_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()
 
@@ -228,7 +228,7 @@ if GLOBAL_IMG_URL:
     if GLOBAL_IMG_URL != "assets/Global.jpeg":
         if not re.match("(?:http|https)://", GLOBAL_IMG_URL):
             print(
-                "[ERROR] - Your GLOBAL_IMG_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL GLOBAL_IMG_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()
 
@@ -237,7 +237,7 @@ if STATS_IMG_URL:
     if STATS_IMG_URL != "assets/Stats.jpeg":
         if not re.match("(?:http|https)://", STATS_IMG_URL):
             print(
-                "[ERROR] - Your STATS_IMG_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL STATS_IMG_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()
 
@@ -246,7 +246,7 @@ if TELEGRAM_AUDIO_URL:
     if TELEGRAM_AUDIO_URL != "assets/Audio.jpeg":
         if not re.match("(?:http|https)://", TELEGRAM_AUDIO_URL):
             print(
-                "[ERROR] - Your TELEGRAM_AUDIO_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL TELEGRAM_AUDIO_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()
 
@@ -255,7 +255,7 @@ if STREAM_IMG_URL:
     if STREAM_IMG_URL != "assets/Stream.jpeg":
         if not re.match("(?:http|https)://", STREAM_IMG_URL):
             print(
-                "[ERROR] - Your STREAM_IMG_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL STREAM_IMG_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()
 
@@ -264,7 +264,7 @@ if SOUNCLOUD_IMG_URL:
     if SOUNCLOUD_IMG_URL != "assets/Soundcloud.jpeg":
         if not re.match("(?:http|https)://", SOUNCLOUD_IMG_URL):
             print(
-                "[ERROR] - Your SOUNCLOUD_IMG_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL SOUNCLOUD_IMG_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()
 
@@ -272,7 +272,7 @@ if YOUTUBE_IMG_URL:
     if YOUTUBE_IMG_URL != "assets/Youtube.jpeg":
         if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
             print(
-                "[ERROR] - Your YOUTUBE_IMG_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL YOUTUBE_IMG_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()
 
@@ -281,6 +281,6 @@ if TELEGRAM_VIDEO_URL:
     if TELEGRAM_VIDEO_URL != "assets/Video.jpeg":
         if not re.match("(?:http|https)://", TELEGRAM_VIDEO_URL):
             print(
-                "[ERROR] - Your TELEGRAM_VIDEO_URL url is wrong. Please ensure that it starts with https://"
+            "[ERROR] - URL TELEGRAM_VIDEO_URL Anda salah. Pastikan dimulai dengan https://"
             )
             sys.exit()

@@ -33,7 +33,7 @@ def AdminRightsCheck(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    text=f"{app.mention} sedang dalam pemeliharaan, kunjungi <a href={SUPPORT_GROUP}>grup dukungan</a> untuk mengetahui alasannya.",
                     disable_web_page_preview=True,
                 )
 
@@ -52,7 +52,7 @@ def AdminRightsCheck(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
+                            text="Bagaimana cara memperbaikinya?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -90,7 +90,7 @@ def AdminActual(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    text=f"{app.mention} sedang dalam pemeliharaan, kunjungi <a href={SUPPORT_GROUP}>grup dukungan</a> untuk mengetahui alasannya.",
                     disable_web_page_preview=True,
                 )
 
@@ -109,7 +109,7 @@ def AdminActual(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
+                            text="Bagaimana cara memperbaikinya?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
@@ -136,7 +136,7 @@ def ActualAdminCB(mystic):
         if await is_maintenance() is False:
             if CallbackQuery.from_user.id not in SUDOERS:
                 return await CallbackQuery.answer(
-                    f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    f"{app.mention} sedang dalam pemeliharaan, kunjungi grup dukungan untuk mengetahui alasannya.",
                     show_alert=True,
                 )
         try:
@@ -167,7 +167,7 @@ def ActualAdminCB(mystic):
                                 )
                     elif a is None:
                         return await CallbackQuery.answer(
-                            "You are not a member of this chat."
+                            "Anda bukan anggota obrolan ini."
                         )
             except Exception as e:
                 return await CallbackQuery.answer(f"Error: {str(e)}")

@@ -18,9 +18,9 @@ def ids(_, message):
     reply = message.reply_to_message
     if reply:
         message.reply_text(
-            f"**ʏᴏᴜʀ ɪᴅ**: `{message.from_user.id}`\n**{reply.from_user.first_name}'s ɪᴅ**: `{reply.from_user.id}`\n**ᴄʜᴀᴛ ɪᴅ**: `{message.chat.id}`"
+            f"**ID Anda**: `{message.from_user.id}`\n**ID {reply.from_user.first_name}**: `{reply.from_user.id}`\n**ID Obrolan**: `{message.chat.id}`"
         )
     else:
         message.reply(
-            f"**ʏᴏᴜʀ ɪᴅ**: `{message.from_user.id}`\n**ᴄʜᴀᴛ ɪᴅ**: `{message.chat.id}`"
+            f"**ID Anda**: `{message.from_user.id}`\n**ID Obrolan**: `{message.chat.id}`"
         )

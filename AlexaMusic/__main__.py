@@ -34,7 +34,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("AlexaMusic").error("Add Pyrogram string session and then try...")
+        LOGGER("AlexaMusic").error("Tambahkan sesi string Pyrogram dan coba lagi...")
         sys.exit()
     await sudo()
     try:
@@ -49,26 +49,26 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("AlexaMusic.plugins" + all_module)
-    LOGGER("AlexaMusic.plugins").info("Necessary Modules Imported Successfully.")
+    LOGGER("AlexaMusic.plugins").info("Modul yang Diperlukan Berhasil Diimpor.")
     await userbot.start()
     await Alexa.start()
     try:
         await Alexa.stream_call("https://telegra.ph/file/b60b80ccb06f7a48f68b5.mp4")
     except (NoActiveGroupCall, GroupCallNotFound):
         LOGGER("AlexaMusic").error(
-            "[ERROR] - \n\nTurn on group voice chat and don't put it off otherwise I'll stop working thanks."
+            "[ERROR] - \n\nNyalakan obrolan suara grup dan jangan matikan, jika tidak, saya akan berhenti bekerja. Terima kasih."
         )
         sys.exit()
     except:
         pass
     await Alexa.decorators()
-    LOGGER("AlexaMusic").info("Alexa Music Bot Started Successfully")
+    LOGGER("AlexaMusic").info("Bot Musik Delta Berhasil Dimulai")
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("AlexaMusic").info("Stopping Alexa Music Bot...")
+    LOGGER("AlexaMusic").info("Menghentikan Bot Musik Delta...")
 
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
-    LOGGER("AlexaMusic").info("Stopping Music Bot")
+    LOGGER("AlexaMusic").info("Menghentikan Bot Musik")

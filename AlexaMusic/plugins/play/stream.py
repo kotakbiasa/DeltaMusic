@@ -47,11 +47,11 @@ async def stream_command(
             await Alexa.stream_call(url)
         except NoActiveGroupCall:
             await mystic.edit_text(
-                "ᴛʜᴇʀᴇ's ᴀɴ ɪssᴜᴇ ᴡɪᴛʜ ᴛʜᴇ ʙᴏᴛ. ᴘʟᴇᴀsᴇ ʀᴇᴘᴏʀᴛ ɪᴛ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ ᴀɴᴅ ᴀsᴋ ᴛʜᴇᴍ ᴛᴏ ᴄʜᴇᴄᴋ ʟᴏɢɢᴇʀ ɢʀᴏᴜᴘ."
+                "Ada masalah dengan bot. Silakan laporkan ke pemilik saya dan minta mereka untuk memeriksa grup logger."
             )
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                "ᴘʟᴇᴀsᴇ ᴛᴜʀɴ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.. ʙᴏᴛ ɪs ɴᴏᴛ ᴀʙʟᴇ ᴛᴏ sᴛʀᴇᴀᴍ ᴜʀʟs..",
+                "Silakan nyalakan obrolan suara.. Bot tidak dapat melakukan streaming URL..",
             )
         except Exception as e:
             return await mystic.edit_text(_["general_3"].format(type(e).__name__))

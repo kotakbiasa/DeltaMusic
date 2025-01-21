@@ -61,24 +61,18 @@ class Userbot(Client):
         )
 
     async def start(self):
-        LOGGER(__name__).info(f"Starting Assistant Clients...")
+        LOGGER(__name__).info("Memulai Klien Asisten...")
         if config.STRING1:
             await self.one.start()
-            try:
-                await self.one.join_chat("Alexa_Help")
-                await self.one.join_chat("TheTeamAlexa")
-                await self.one.join_chat("Alexa_BotUpdates")
-            except:
-                pass
             assistants.append(1)
             try:
                 await self.one.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "Asisten dimulai, sekarang saatnya menikmati musik di obrolan video Telegram.",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    "Akun Asisten 1 gagal mengakses Grup Log. Pastikan Anda telah menambahkan asisten Anda ke grup log Anda dan dipromosikan sebagai admin!"
                 )
                 sys.exit()
             get_me = await self.one.get_me()
@@ -89,24 +83,18 @@ class Userbot(Client):
                 self.one.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.one.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Started as {self.one.name}")
+            LOGGER(__name__).info(f"Asisten dimulai sebagai {self.one.name}")
         if config.STRING2:
             await self.two.start()
-            try:
-                await self.two.join_chat("Alexa_Help")
-                await self.two.join_chat("TheTeamAlexa")
-                await self.two.join_chat("Alexa_BotUpdates")
-            except:
-                pass
             assistants.append(2)
             try:
                 await self.two.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "Asisten dimulai, sekarang saatnya menikmati musik di obrolan video Telegram.",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 2 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    "Akun Asisten 2 gagal mengakses Grup Log. Pastikan Anda telah menambahkan asisten Anda ke grup log Anda dan dipromosikan sebagai admin!"
                 )
                 sys.exit()
             get_me = await self.two.get_me()
@@ -117,24 +105,18 @@ class Userbot(Client):
                 self.two.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.two.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Two Started as {self.two.name}")
+            LOGGER(__name__).info(f"Asisten Dua dimulai sebagai {self.two.name}")
         if config.STRING3:
             await self.three.start()
-            try:
-                await self.three.join_chat("Alexa_Help")
-                await self.three.join_chat("TheTeamAlexa")
-                await self.three.join_chat("Alexa_BotUpdates")
-            except:
-                pass
             assistants.append(3)
             try:
                 await self.three.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "Asisten dimulai, sekarang saatnya menikmati musik di obrolan video Telegram.",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 3 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    "Akun Asisten 3 gagal mengakses Grup Log. Pastikan Anda telah menambahkan asisten Anda ke grup log Anda dan dipromosikan sebagai admin!"
                 )
                 sys.exit()
             get_me = await self.three.get_me()
@@ -145,24 +127,18 @@ class Userbot(Client):
                 self.three.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.three.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Three Started as {self.three.name}")
+            LOGGER(__name__).info(f"Asisten Tiga dimulai sebagai {self.three.name}")
         if config.STRING4:
             await self.four.start()
-            try:
-                await self.four.join_chat("Alexa_Help")
-                await self.four.join_chat("TheTeamAlexa")
-                await self.four.join_chat("Alexa_BotUpdates")
-            except:
-                pass
             assistants.append(4)
             try:
                 await self.four.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "Asisten dimulai, sekarang saatnya menikmati musik di obrolan video Telegram.",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 4 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    "Akun Asisten 4 gagal mengakses Grup Log. Pastikan Anda telah menambahkan asisten Anda ke grup log Anda dan dipromosikan sebagai admin!"
                 )
                 sys.exit()
             get_me = await self.four.get_me()
@@ -173,24 +149,18 @@ class Userbot(Client):
                 self.four.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.four.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Four Started as {self.four.name}")
+            LOGGER(__name__).info(f"Asisten Empat dimulai sebagai {self.four.name}")
         if config.STRING5:
             await self.five.start()
-            try:
-                await self.five.join_chat("Alexa_Help")
-                await self.five.join_chat("TheTeamAlexa")
-                await self.five.join_chat("Alexa_BotUpdates")
-            except:
-                pass
             assistants.append(5)
             try:
                 await self.five.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴀssɪsᴛᴀɴᴛ sᴛᴀʀᴛᴇᴅ, ɴᴏᴡ ɪᴛ's ᴛɪᴍᴇ ᴛᴏ ᴇɴᴊᴏʏ ᴍᴜsɪᴄ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴅᴇᴏᴄʜᴀᴛs.",
+                    "Asisten dimulai, sekarang saatnya menikmati musik di obrolan video Telegram.",
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 5 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin ! "
+                    "Akun Asisten 5 gagal mengakses Grup Log. Pastikan Anda telah menambahkan asisten Anda ke grup log Anda dan dipromosikan sebagai admin!"
                 )
                 sys.exit()
             get_me = await self.five.get_me()
@@ -201,4 +171,4 @@ class Userbot(Client):
                 self.five.name = get_me.first_name + " " + get_me.last_name
             else:
                 self.five.name = get_me.first_name
-            LOGGER(__name__).info(f"Assistant Five Started as {self.five.name}")
+            LOGGER(__name__).info(f"Asisten Lima dimulai sebagai {self.five.name}")

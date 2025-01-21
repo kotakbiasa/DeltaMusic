@@ -194,7 +194,7 @@ async def play_commnd(
             spotify = True
             if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
                 return await mystic.edit_text(
-                    "ᴛʜɪs ʙᴏᴛ ᴄᴀɴ'ᴛ ᴩʟᴀʏ sᴩᴏᴛɪғʏ ᴛʀᴀᴄᴋs ᴀɴᴅ ᴩʟᴀʏʟɪsᴛs, ᴩʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴏᴡɴᴇʀ ᴀɴᴅ ᴀsᴋ ʜɪᴍ ᴛᴏ ᴀᴅᴅ sᴩᴏᴛɪғʏ ᴩʟᴀʏᴇʀ."
+                    "Bot ini tidak dapat memutar lagu dan playlist Spotify, silakan hubungi pemilik saya dan minta dia untuk menambahkan pemutar Spotify."
                 )
             if "track" in url:
                 try:
@@ -297,11 +297,11 @@ async def play_commnd(
                 await Alexa.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(
-                    "ᴛʜᴇʀᴇ's ᴀɴ ᴇʀʀᴏʀ ɪɴ ᴛʜᴇ ʙᴏᴛ, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴛᴏ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴀs sᴏᴏɴ ᴀs ᴩᴏssɪʙʟᴇ."
+                    "Ada kesalahan pada bot, silakan laporkan ke obrolan dukungan secepat mungkin."
                 )
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    "ᴩʟᴇᴀsᴇ ᴛᴜʀɴ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ ᴛᴏ sᴛʀᴇᴀᴍ ᴜʀʟ.",
+                    "Silakan aktifkan video chat untuk streaming URL.",
                 )
             except Exception as e:
                 return await mystic.edit_text(_["general_3"].format(type(e).__name__))
@@ -323,7 +323,7 @@ async def play_commnd(
                 ex_type = type(e).__name__
                 err = e if ex_type == "AssistantErr" else _["general_3"].format(ex_type)
                 return await mystic.edit_text(err)
-            return await play_logs(message, streamtype="M3u8 or Index Link")
+            return await play_logs(message, streamtype="Link M3u8 atau Index")
     else:
         if len(message.command) < 2:
             buttons = botplaylist_markup(_)
@@ -425,7 +425,7 @@ async def play_commnd(
                     ),
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
-                return await play_logs(message, streamtype=f"Searched on Youtube")
+                return await play_logs(message, streamtype=f"Pencarian di Youtube")
             else:
                 buttons = track_markup(
                     _,
@@ -440,7 +440,7 @@ async def play_commnd(
                     caption=cap,
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
-                return await play_logs(message, streamtype=f"URL Searched Inline")
+                return await play_logs(message, streamtype=f"URL Dicari Inline")
 
 
 @app.on_callback_query(filters.regex("MusicStream") & ~BANNED_USERS)
@@ -516,7 +516,7 @@ async def play_music(client, CallbackQuery, _):
 async def anonymous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
-            "ʏᴏᴜ'ʀᴇ ᴀɴ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ\n\nʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ ғᴏʀ ᴜsɪɴɢ ᴍᴇ.",
+            "Anda adalah admin anonim\n\nKembali ke akun pengguna untuk menggunakan saya.",
             show_alert=True,
         )
     except:

@@ -27,38 +27,12 @@ def lanuages_keyboard(_):
     keyboard = InlineKeyboard(row_width=2)
     keyboard.row(
         InlineKeyboardButton(
-            text="🇦🇺 ᴇɴɢʟɪsʜ 🇦🇺",
+            text="🇦🇺 English ",
             callback_data=f"languages:en",
         ),
         InlineKeyboardButton(
-            text="🇮🇳 हिन्दी 🇮🇳",
-            callback_data=f"languages:hi",
-        ),
-    )
-    keyboard.row(
-        InlineKeyboardButton(
-            text="🇱🇰 සිංහල 🇱🇰",
-            callback_data=f"languages:si",
-        ),
-        InlineKeyboardButton(
-            text="🇦🇿 Azərbaycan 🇦🇿",
-            callback_data=f"languages:az",
-        ),
-    )
-    keyboard.row(
-        InlineKeyboardButton(
-            text="🇮🇳 ગુજરાતી 🇮🇳",
-            callback_data=f"languages:gu",
-        ),
-        InlineKeyboardButton(
-            text="🇹🇷 Türkiye Türkçesi 🇹🇷",
-            callback_data=f"languages:tr",
-        ),
-    )
-    keyboard.row(
-        InlineKeyboardButton(
-            text="🐕 ᴄʜᴇᴇᴍs 🐕",
-            callback_data=f"languages:cheems",
+            text="🇮🇩 Indonesia",
+            callback_data=f"languages:id",
         ),
     )
     keyboard.row(
@@ -102,16 +76,16 @@ async def language_markup(client, CallbackQuery, _):
     old = await get_lang(CallbackQuery.message.chat.id)
     if str(old) == str(langauge):
         return await CallbackQuery.answer(
-            "ʏᴏᴜ'ʀᴇ ᴀʟʀᴇᴀᴅʏ ᴜsɪɴɢ sᴀᴍᴇ ʟᴀɴɢᴜᴀɢᴇ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ.", show_alert=True
+            "Anda sudah menggunakan bahasa yang sama untuk obrolan ini.", show_alert=True
         )
     try:
         _ = get_string(langauge)
         await CallbackQuery.answer(
-            "sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʜᴀɴɢᴇᴅ ʏᴏᴜʀ ʟᴀɴɢᴜᴀɢᴇ.", show_alert=True
+            "Berhasil mengubah bahasa Anda.", show_alert=True
         )
     except:
         return await CallbackQuery.answer(
-            "ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ʟᴀɴɢᴜᴀɢᴇ ᴏʀ ᴛʜᴇ ʟᴀɴɢᴜᴀɢᴇ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ.",
+            "Gagal mengubah bahasa atau bahasa sedang dalam pemeliharaan.",
             show_alert=True,
         )
     await set_lang(CallbackQuery.message.chat.id, langauge)

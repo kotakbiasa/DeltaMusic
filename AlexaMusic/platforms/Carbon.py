@@ -111,7 +111,7 @@ class CarbonAPI:
                     json=params,
                 )
             except client_exceptions.ClientConnectorError:
-                raise UnableToFetchCarbon("Can not reach the Host!")
+                raise UnableToFetchCarbon("Tidak dapat menghubungi Host!")
             resp = await request.read()
             with open(f"cache/carbon{user_id}.jpg", "wb") as f:
                 f.write(resp)

@@ -96,16 +96,16 @@ async def ping_com(client, message: Message, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️ᴅᴜʀᴀᴛɪᴏɴ:** ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ sᴛʀᴇᴀᴍ\n\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
+        "**⌛️DURASI:** Durasi tidak diketahui\n\nKlik tombol di bawah untuk melihat daftar antrean lengkap."
         if DUR == "Unknown"
-        else "\nᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
+        else "\nKlik tombol di bawah untuk melihat daftar antrean lengkap."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} ᴩʟᴀʏᴇʀ**
+    cap = f"""**{config.MUSIC_BOT_NAME} Pemutar**
 
-📌 **ᴛɪᴛʟᴇ:** {title}
+📌 **Judul:** {title}
 
-🍒 **ᴛʏᴩᴇ:** {typo}
-💖 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {user}
+🍒 **Tipe:** {typo}
+💖 **Diminta oleh:** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)
@@ -188,11 +188,11 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     for x in got:
         j += 1
         if j == 1:
-            msg += f'ᴄᴜʀʀᴇɴᴛʟʏ ᴩʟᴀʏɪɴɢ:\n\n📌ᴛɪᴛʟᴇ: {x["title"]}\nᴅᴜʀᴀᴛɪᴏɴ: {x["dur"]}\nʙʏ: {x["by"]}\n\n'
+            msg += f'Sedang diputar:\n\n📌Judul: {x["title"]}\nDurasi: {x["dur"]}\nOleh: {x["by"]}\n\n'
         elif j == 2:
-            msg += f'ǫᴜᴇᴜᴇᴅ:\n\n📌ᴛɪᴛʟᴇ: {x["title"]}\nᴅᴜʀᴀᴛɪᴏɴ: {x["dur"]}\nʙʏ: {x["by"]}\n\n'
+            msg += f'Diantrekan:\n\n📌Judul: {x["title"]}\nDurasi: {x["dur"]}\nOleh: {x["by"]}\n\n'
         else:
-            msg += f'📌ᴛɪᴛʟᴇ: {x["title"]}\nᴅᴜʀᴀᴛɪᴏɴ: {x["dur"]}\nʙʏ: {x["by"]}\n\n'
+            msg += f'📌Judul: {x["title"]}\nDurasi: {x["dur"]}\nOleh: {x["by"]}\n\n'
     if "Queued" in msg:
         if len(msg) < 700:
             await asyncio.sleep(1)
@@ -246,16 +246,16 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️ᴅᴜʀᴀᴛɪᴏɴ:** ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ sᴛʀᴇᴀᴍ\n\nᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
+        "**⌛️DURASI:** Durasi tidak diketahui\n\nKlik tombol di bawah untuk melihat daftar antrean lengkap."
         if DUR == "Unknown"
-        else "\nᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
+        else "\nKlik tombol di bawah untuk melihat daftar antrean lengkap."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} ᴩʟᴀʏᴇʀ**
+    cap = f"""**{config.MUSIC_BOT_NAME} Pemutar**
 
-📌 **ᴛɪᴛʟᴇ:** {title}
+📌 **Judul:** {title}
 
-🍒 **ᴛʏᴩᴇ:** {typo}
-💖 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {user}
+🍒 **Tipe:** {typo}
+💖 **Diminta oleh:** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, cplay, videoid)

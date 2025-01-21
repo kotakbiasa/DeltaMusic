@@ -48,22 +48,22 @@ async def inline_query_handler(client, query):
                 [
                     [
                         InlineKeyboardButton(
-                            text="• ʏᴏᴜᴛᴜʙᴇ •",
+                            text="• YouTube •",
                             url=link,
                         )
                     ],
                 ]
             )
             searched_text = f"""
-📌**ᴛɪᴛʟᴇ:** [{title}]({link})
+📌**Judul:** [{title}]({link})
 
-⏳**ᴅᴜʀᴀᴛɪᴏɴ:** {duration} Mins
-👀**ᴠɪᴇᴡs:** `{views}`
-⏰**ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ:** {published}
-🎥**ᴄʜᴀɴɴᴇʟ:** {channel}
-📎**ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ᴠɪsɪᴛ ᴄʜᴀɴɴᴇʟ]({channellink})
+⏳**Durasi:** {duration} Menit
+👀**Tontonan:** `{views}`
+⏰**Diterbitkan pada:** {published}
+🎥**Saluran:** {channel}
+📎**Tautan Saluran:** [Kunjungi Saluran]({channellink})
 
-💖 ** sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {MUSIC_BOT_NAME} **"""
+💖 ** Pencarian didukung oleh {MUSIC_BOT_NAME} **"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,
