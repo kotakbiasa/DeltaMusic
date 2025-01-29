@@ -25,13 +25,13 @@ async def testspeed(m):
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        await m.edit("<b>⇆ 𝖱𝗎𝗇𝗇𝗂𝗇𝗀 𝖣𝗈𝗐𝗅𝗈𝖺𝖽 𝖲𝗉𝖾𝖾𝖽𝖳𝖾𝗌𝗍 ...</b>")
+        await m.edit("<b>⬇️ Menjalankan Tes Kecepatan Unduh ...</b>")
         test.download()
-        await m.edit("<b>⇆ 𝖱𝗎𝗇𝗇𝗂𝗇𝗀 𝖴𝗉𝗅𝗈𝖺𝖽 𝖲𝗉𝖾𝖾𝖽𝖳𝖾𝗌𝗍 ...</b>")
+        await m.edit("<b>⬆️ Menjalankan Tes Kecepatan Unggah ...</b>")
         test.upload()
         test.results.share()
         result = test.results.dict()
-        await m.edit("<b>↻ 𝖲𝗁𝖺𝗋𝗂𝗇𝗀 𝖲𝗉𝖾𝖾𝖽𝖳𝖾𝗌𝗍 𝖱𝖾𝗌𝗎𝗅𝗍𝗌 ...</b>")
+        await m.edit("<b>📤 Membagikan Hasil SpeedTest ...</b>")
     except Exception as e:
         return await m.edit(str(e))
     return result
@@ -39,22 +39,25 @@ async def testspeed(m):
 
 @app.on_message(filters.command(SPEEDTEST_COMMAND) & SUDOERS)
 async def speedtest_function(client, message):
-    m = await message.reply_text("» 𝖱𝗎𝗇𝗇𝗂𝗇𝗀 𝖠 𝖲𝗉𝖾𝖾𝖽𝖳𝖾𝗌𝗍 ...")
+    m = await message.reply_text("» Menjalankan Tes Kecepatan ...")
     result = await testspeed(m)
-    output = f"""✯ <b>𝖲𝗉𝖾𝖾𝖽𝖳𝖾𝗌𝗍 𝖱𝖾𝗌𝗎𝗅𝗍𝗌</b> ✯
+    if isinstance(result, dict):
+        output = f"""🌐 <b>Hasil SpeedTest</b>
 
-<u><b>𝖢𝗅𝗂𝖾𝗇𝗍 :</b></u>
-<b>» 𝖨𝖲𝖯 :</b> {result['client']['isp']}
-<b>» 𝖢𝗈𝗎𝗇𝗍𝗋𝗒 :</b> {result['client']['country']}
+    <u><b>Klien :</b></u>
+    <b>ISP :</b> {result['client']['isp']}
+    <b>Negara :</b> {result['client']['country']}
 
-<u><b>𝖲𝖾𝗋𝗏𝖾𝗋 :</b></u>
-<b>» 𝖭𝖺𝗆𝖾 :</b> {result['server']['name']}
-<b>» 𝖢𝗈𝗎𝗇𝗍𝗋𝗒 :</b> {result['server']['country']}, {result['server']['cc']}
-<b>» 𝖲𝗉𝗈𝗇𝗌𝗈𝗋 :</b> {result['server']['sponsor']}
-<b>» 𝖫𝖺𝗍𝖾𝗇𝖼𝗒 :</b> {result['server']['latency']} 
-<b>» 𝖯𝗂𝗇𝗀 :</b> {result['ping']}
-"""
-    msg = await app.send_photo(
-        chat_id=message.chat.id, photo=result["share"], caption=output
-    )
-    await m.delete()
+    <u><b>Server :</b></u>
+    <b>Nama :</b> {result['server']['name']}
+    <b>Negara :</b> {result['server']['country']}, {result['server']['cc']}
+    <b>Sponsor :</b> {result['server']['sponsor']}
+    <b>Latensi :</b> {result['server']['latency']} 
+    <b>Ping :</b> {result['ping']}
+    """
+        msg = await app.send_photo(
+            chat_id=message.chat.id, photo=result["share"], caption=output
+        )
+        await m.delete()
+    else:
+        await m.edit("Gagal menjalankan tes kecepatan.")

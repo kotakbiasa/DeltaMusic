@@ -45,20 +45,20 @@ async def gen_thumb(videoid):
                 title = re.sub(r"\W+", " ", title)
                 title = title.title()
             except:
-                title = "Unsupported Title"
+                title = "Judul Tidak Didukung"
             try:
                 duration = result["duration"]
             except:
-                duration = "Unknown Mins"
+                duration = "Durasi Tidak Diketahui"
             thumbnail = result["thumbnails"][0]["url"].split("?")[0]
             try:
                 views = result["viewCount"]["short"]
             except:
-                views = "Unknown Views"
+                views = "Tampilan Tidak Diketahui"
             try:
                 channel = result["channel"]["name"]
             except:
-                channel = "Unknown Channel"
+                channel = "Saluran Tidak Diketahui"
 
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
@@ -90,10 +90,10 @@ async def gen_thumb(videoid):
         name_font = ImageFont.truetype("assets/font.ttf", 30)
         para = textwrap.wrap(title, width=30)
         j = 0
-        draw.text((5, 5), f"Delta MusicBot", fill="white", font=name_font)
+        draw.text((5, 5), f"Delta Stream Bot", fill="white", font=name_font)
         draw.text(
             (600, 150),
-            "NOW PLAYING",
+            "SEDANG DIPUTAR",
             fill="white",
             stroke_width=3,
             stroke_fill="black",
@@ -128,7 +128,7 @@ async def gen_thumb(videoid):
         )
         draw.text(
             (600, 500),
-            f"Duration : {duration[:23]} Mins",
+            f"Durasi : {duration[:23]} Mins",
             (255, 255, 255),
             font=arial,
         )
@@ -161,20 +161,20 @@ async def gen_qthumb(videoid):
                 title = re.sub(r"\W+", " ", title)
                 title = title.title()
             except:
-                title = "Unsupported Title"
+                title = "Judul Tidak Didukung"
             try:
                 duration = result["duration"]
             except:
-                duration = "Unknown Mins"
+                duration = "Durasi Tidak Diketahui"
             thumbnail = result["thumbnails"][0]["url"].split("?")[0]
             try:
                 views = result["viewCount"]["short"]
             except:
-                views = "Unknown Views"
+                views = "Tampilan Tidak Diketahui"
             try:
                 channel = result["channel"]["name"]
             except:
-                channel = "Unknown Channel"
+                channel = "Saluran Tidak Diketahui"
 
         async with aiohttp.ClientSession() as session:
             async with session.get(thumbnail) as resp:
@@ -206,10 +206,10 @@ async def gen_qthumb(videoid):
         name_font = ImageFont.truetype("assets/font.ttf", 30)
         para = textwrap.wrap(title, width=30)
         j = 0
-        draw.text((5, 5), f"Delta Music", fill="white", font=name_font)
+        draw.text((5, 5), f"Delta Stream Bot", fill="white", font=name_font)
         draw.text(
             (600, 150),
-            "ADDED THIS SONG IN QUEUE",
+            "MENAMBAHKAN LAGU INI KE ANTRIAN",
             fill="white",
             stroke_width=3,
             stroke_fill="black",
@@ -244,7 +244,7 @@ async def gen_qthumb(videoid):
         )
         draw.text(
             (600, 500),
-            f"Duration : {duration[:23]} Mins",
+            f"Durasi : {duration[:23]} Menit",
             (255, 255, 255),
             font=arial,
         )

@@ -90,7 +90,7 @@ HELP_5 = """🥺**<u>Tambah & Hapus Pengguna Sudo:</u>**
 /get_log [jumlah baris] : Dapatkan log bot Anda [nilai default adalah 100 baris]
 /autoend [enable|disable] : Aktifkan auto end streaming jika tidak ada yang mendengarkan.
 
-🤑**<u>Perintah Statistik:</u>**
+📋**<u>Perintah Statistik:</u>**
 /activevoice : Tampilkan daftar voicechat aktif di bot.
 /activevideo : Tampilkan daftar videochat aktif di bot.
 /stats : Tampilkan statistik bot saat ini.

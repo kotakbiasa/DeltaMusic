@@ -58,7 +58,7 @@ async def start_comm(client, message: Message, _):
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
             m = await message.reply_text(
-                "🥱 Mengambil statistik pribadi Anda dari server {config.MUSIC_BOT_NAME}."
+                "Mengambil statistik pribadi Anda dari server {config.MUSIC_BOT_NAME}."
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -144,7 +144,7 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-😲**Informasi Lagu**😲
+**Informasi Lagu**
 
 📌**Judul:** {title}
 
@@ -159,8 +159,8 @@ async def start_comm(client, message: Message, _):
             key = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="• YouTube •", url=f"{link}"),
-                        InlineKeyboardButton(text="• Tutup •", callback_data="close"),
+                        InlineKeyboardButton(text="🎬 YouTube", url=f"{link}"),
+                        InlineKeyboardButton(text="Tutup", callback_data="close"),
                     ],
                 ]
             )
@@ -283,7 +283,7 @@ async def alive(client, message: Message):
         photo=f"https://telegra.ph/file/125f531d44a9999290cac.jpg",
         caption=f"""━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ Halo, Delta berfungsi dan berjalan dengan baik\n✪ Terima kasih kepada tim Yukki 🌼 ..\n\n┏━━━━━━━━━━━━━━━━━┓\n┣★ Pemilik    : [Asad Ali](https://t.me/Dr_Asad_Ali)\n┣★ Pembaruan › : [Delta Help](https://t.me/Delta_BotUpdates)┓\n┣★ Repo › : [Delta Repo](https://github.com/jankarikiduniya/DeltaMusic)\n┗━━━━━━━━━━━━━━━━━┛\n\n💞 Jika Anda memiliki pertanyaan, DM ke [pemilik saya](https://t.me/Jankari_Ki_Duniya) pastikan untuk memberi bintang pada proyek kami ...\n\n━━━━━━━━━━━━━━━━━━━━━━━━""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🌼 Delta Chat", url=config.SUPPORT_GROUP)]]
+            [[InlineKeyboardButton("💬 Delta Chat", url=config.SUPPORT_GROUP)]]
         ),
     )
 
@@ -292,7 +292,7 @@ async def alive(client, message: Message):
 async def verify(client, message: Message):
     if await is_served_user(message.from_user.id):
         await message.reply_text(
-            text="😂 Anda sudah diverifikasi",
+            text="=✅ Anda sudah diverifikasi",
         )
         return
     await add_served_user(message.from_user.id)
@@ -300,6 +300,6 @@ async def verify(client, message: Message):
         photo=f"https://telegra.ph/file/7f08acd78577f99f60ff5.png",
         caption=f"""━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ **Selamat** 🎉\n✪ Sekarang Anda adalah anggota terverifikasi Delta, kembali dan nikmati layanan kami dan mainkan musik 🌼 ..\n\n━━━━━━━━━━━━━━━━━━━━━━━━""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🌼 Delta Chat", url=config.SUPPORT_GROUP)]]
+            [[InlineKeyboardButton("💬 Delta Chat", url=config.SUPPORT_GROUP)]]
         ),
     )

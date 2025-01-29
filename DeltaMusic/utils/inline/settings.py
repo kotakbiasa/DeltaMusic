@@ -31,7 +31,7 @@ def setting_markup(_):
         ],
         [
             InlineKeyboardButton(
-                text="𝖲𝗎𝗉𝗉𝗈𝗋𝗍",
+                text="💬 Dukungan",
                 url=config.SUPPORT_GROUP,
             ),
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close"),
