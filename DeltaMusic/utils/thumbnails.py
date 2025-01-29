@@ -209,7 +209,7 @@ async def gen_qthumb(videoid):
         draw.text((5, 5), f"Delta Stream Bot", fill="white", font=name_font)
         draw.text(
             (600, 150),
-            "MENAMBAHKAN LAGU INI KE ANTRIAN",
+            "MASUK ANTRIAN",
             fill="white",
             stroke_width=3,
             stroke_fill="black",

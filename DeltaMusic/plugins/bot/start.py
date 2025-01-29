@@ -280,7 +280,7 @@ async def welcome(client, message: Message):
 @app.on_message(commandpro(["/alive", "Delta"]))
 async def alive(client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/125f531d44a9999290cac.jpg",
+        photo=f"https://envs.sh/a8u.jpg",
         caption=f"""━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ Halo, Delta berfungsi dan berjalan dengan baik\n✪ Terima kasih kepada tim Yukki 🌼 ..\n\n┏━━━━━━━━━━━━━━━━━┓\n┣★ Pemilik    : [Asad Ali](https://t.me/Dr_Asad_Ali)\n┣★ Pembaruan › : [Delta Help](https://t.me/Delta_BotUpdates)┓\n┣★ Repo › : [Delta Repo](https://github.com/jankarikiduniya/DeltaMusic)\n┗━━━━━━━━━━━━━━━━━┛\n\n💞 Jika Anda memiliki pertanyaan, DM ke [pemilik saya](https://t.me/Jankari_Ki_Duniya) pastikan untuk memberi bintang pada proyek kami ...\n\n━━━━━━━━━━━━━━━━━━━━━━━━""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("💬 Delta Chat", url=config.SUPPORT_GROUP)]]
@@ -292,12 +292,12 @@ async def alive(client, message: Message):
 async def verify(client, message: Message):
     if await is_served_user(message.from_user.id):
         await message.reply_text(
-            text="=✅ Anda sudah diverifikasi",
+            text="✅ Anda sudah diverifikasi",
         )
         return
     await add_served_user(message.from_user.id)
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/7f08acd78577f99f60ff5.png",
+        photo=f"https://envs.sh/a8w.jpg",
         caption=f"""━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ **Selamat** 🎉\n✪ Sekarang Anda adalah anggota terverifikasi Delta, kembali dan nikmati layanan kami dan mainkan musik 🌼 ..\n\n━━━━━━━━━━━━━━━━━━━━━━━━""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("💬 Delta Chat", url=config.SUPPORT_GROUP)]]

@@ -13,51 +13,47 @@ as you want or you can collabe if you have new ideas.
 import asyncio
 import speedtest
 from pyrogram import filters
+from pyrogram.types import Message
 from strings import get_command
 from DeltaMusic import app
 from DeltaMusic.misc import SUDOERS
+from DeltaMusic.utils.decorators.language import language
 
 # Commands
 SPEEDTEST_COMMAND = get_command("SPEEDTEST_COMMAND")
 
 
-async def testspeed(m):
+def testspeed(m, _):
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        await m.edit("<b>⬇️ Menjalankan Tes Kecepatan Unduh ...</b>")
+        m = m.edit_text("<b>⬇️ Menjalankan Tes Kecepatan Unduh ...</b>")
         test.download()
-        await m.edit("<b>⬆️ Menjalankan Tes Kecepatan Unggah ...</b>")
+        m = m.edit_text("<b>⬆️ Menjalankan Tes Kecepatan Unggah ...</b>")
         test.upload()
         test.results.share()
         result = test.results.dict()
-        await m.edit("<b>📤 Membagikan Hasil SpeedTest ...</b>")
+        m = m.edit_text("<b>📤 Membagikan Hasil SpeedTest ...</b>")
     except Exception as e:
-        return await m.edit(str(e))
+        return m.edit_text(f"<code>{e}</code>")
     return result
 
 
 @app.on_message(filters.command(SPEEDTEST_COMMAND) & SUDOERS)
-async def speedtest_function(client, message):
+@language
+async def speedtest_function(client, message: Message, _):
     m = await message.reply_text("🚀 Menjalankan Tes Kecepatan ...")
-    result = await testspeed(m)
-    if isinstance(result, dict):
-        output = f"""🌐 <b>Hasil SpeedTest</b>
-
-<u><b>Klien :</b></u>
-<b>ISP :</b> {result['client']['isp']}
-<b>Negara :</b> {result['client']['country']}
-
-<u><b>Server :</b></u>
-<b>Nama :</b> {result['server']['name']}
-<b>Negara :</b> {result['server']['country']}, {result['server']['cc']}
-<b>Sponsor :</b> {result['server']['sponsor']}
-<b>Latensi :</b> {result['server']['latency']} 
-<b>Ping :</b> {result['ping']}
-"""
-        msg = await app.send_photo(
-            chat_id=message.chat.id, photo=result["share"], caption=output
-        )
-        await m.delete()
-    else:
-        await m.edit("Gagal menjalankan tes kecepatan.")
+    loop = asyncio.get_event_loop()
+    result = await loop.run_in_executor(None, testspeed, m, _)
+    output = _["server_15"].format(
+        result["client"]["isp"],
+        result["client"]["country"],
+        result["server"]["name"],
+        result["server"]["country"],
+        result["server"]["cc"],
+        result["server"]["sponsor"],
+        result["server"]["latency"],
+        result["ping"],
+    )
+    msg = await message.reply_photo(photo=result["share"], caption=output)
+    await m.delete()
