@@ -8,7 +8,7 @@ from pyrogram.errors import (
     UserAlreadyParticipant,
     UserNotParticipant,
 )
-from pyrogram.types import Message
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import BANNED_USERS, adminlist
 from strings import get_string
@@ -36,7 +36,11 @@ RADIO_STATION = {
     "Smart FM": "https://streaming.brol.tech/rtfmlounge",
 }
 
-valid_stations = "\n".join([f"`{name}`" for name in sorted(RADIO_STATION.keys())])
+def get_station_buttons():
+    buttons = []
+    for name in sorted(RADIO_STATION.keys()):
+        buttons.append([InlineKeyboardButton(text=name, callback_data=f"radio_station_{name}")])
+    return InlineKeyboardMarkup(buttons)
 
 
 @app.on_message(
@@ -172,7 +176,8 @@ async def radio(client, message: Message):
         return await play_logs(message, streamtype="M3u8 or Index Link")
     else:
         await message.reply(
-            f"Berikan saya nama stasiun untuk memutar radio\nBerikut adalah beberapa nama stasiun:\n{valid_stations}"
+            "Berikan saya nama stasiun untuk memutar radio",
+            reply_markup=get_station_buttons()
         )
 
 
