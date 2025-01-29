@@ -35,7 +35,7 @@ from DeltaMusic.utils.database import (
     remove_active_video_chat,
 )
 from DeltaMusic.utils.decorators.language import language
-from DeltaMusic.utils.pastebin import Alexabin
+from DeltaMusic.utils.pastebin import Deltabin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")
@@ -61,7 +61,7 @@ async def log_(client, message, _):
             if HAPP is None:
                 return await message.reply_text(_["heroku_1"])
             data = HAPP.get_log()
-            link = await Alexabin(data)
+            link = await Deltabin(data)
             return await message.reply_text(link)
         else:
             if os.path.exists(config.LOG_FILE_NAME):
@@ -74,7 +74,7 @@ async def log_(client, message, _):
                     NUMB = 100
                 for x in lines[-NUMB:]:
                     data += x
-                link = await Alexabin(data)
+                link = await Deltabin(data)
                 return await message.reply_text(link)
             else:
                 return await message.reply_text(_["heroku_2"])
@@ -257,7 +257,7 @@ async def update_(client, message, _):
         _update_response_ = "Pembaruan baru tersedia untuk bot!\n\n➣ Mendorong pembaruan sekarang\n\n**Pembaruan:**\n\n"
     _final_updates_ = _update_response_ + updates
     if len(_final_updates_) > 4096:
-        url = await Alexabin(updates)
+        url = await Deltabin(updates)
         nrs = await response.edit(
             f"<b>Pembaruan baru tersedia untuk bot!</b>\n\n➣ Mendorong pembaruan sekarang</code>\n\n**<u>Pembaruan:</u>**\n\n[Periksa pembaruan]({url})"
         )
