@@ -31,7 +31,7 @@ LEAVE_TIME = config.AUTO_SUGGESTION_TIME
 strings = []
 suggestor = {}
 
-for item in get_string("en"):
+for item in get_string("id"):
     if item[0:3] == "sug" and item != "sug_0":
         strings.append(item)
 
