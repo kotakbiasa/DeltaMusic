@@ -13,6 +13,7 @@ as you want or you can collabe if you have new ideas.
 from strings import get_string
 from DeltaMusic.misc import SUDOERS
 from DeltaMusic.utils.database import get_lang, is_commanddelete_on, is_maintenance
+from pyrogram.enums import ChatMemberStatus
 
 
 def language(mystic):
@@ -32,6 +33,12 @@ def language(mystic):
             language = get_string(language)
         except:
             language = get_string("id")
+        
+        # Check if the user is an anonymous admin
+        member = await app.get_chat_member(message.chat.id, message.from_user.id)
+        if member.status == ChatMemberStatus.ADMINISTRATOR and member.user.is_anonymous:
+            return await message.reply_text("Anda terdeteksi sebagai admin anonim, silakan gunakan akun biasa.")
+        
         return await mystic(_, message, language)
 
     return wrapper
