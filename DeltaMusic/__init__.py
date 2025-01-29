@@ -1,21 +1,20 @@
-# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2025 by Delta_Help @ Github, < https://github.com/TheTeamDelta >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Delta © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+TheTeamDelta is a project of Telegram bots with variety of purposes.
+Copyright (c) 2021 ~ Present Team Delta <https://github.com/TheTeamDelta>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
 """
 
-
-from AlexaMusic.core.bot import AlexaBot
-from AlexaMusic.core.dir import dirr
-from AlexaMusic.core.cookies import save_cookies
-from AlexaMusic.core.git import git
-from AlexaMusic.core.userbot import Userbot
-from AlexaMusic.misc import dbb, heroku
+from DeltaMusic.core.bot import DeltaBot
+from DeltaMusic.core.dir import dirr
+from DeltaMusic.core.cookies import save_cookies
+from DeltaMusic.core.git import git
+from DeltaMusic.core.userbot import Userbot
+from DeltaMusic.misc import dbb, heroku
 
 from .logging import LOGGER
 
@@ -35,7 +34,7 @@ heroku()
 # save_cookies()
 
 # Bot Client
-app = AlexaBot()
+app = DeltaBot()
 
 # Assistant Client
 userbot = Userbot()

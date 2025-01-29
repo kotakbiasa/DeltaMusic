@@ -10,8 +10,8 @@ as you want or you can collabe if you have new ideas.
 """
 
 
-from AlexaMusic import app
-from AlexaMusic.utils.database import get_cmode
+from DeltaMusic import app
+from DeltaMusic.utils.database import get_cmode
 
 
 async def get_channeplayCB(_, command, CallbackQuery):

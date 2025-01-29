@@ -1,9 +1,9 @@
-# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2025 by Delta_Help @ Github, < https://github.com/TheTeamDelta >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Delta © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+TheTeamDelta is a project of Telegram bots with variety of purposes.
+Copyright (c) 2021 ~ Present Team Delta <https://github.com/TheTeamDelta>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -15,7 +15,7 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton
 
 from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP, OWNER_ID
-from AlexaMusic import app
+from DeltaMusic import app
 
 
 def start_pannel(_):

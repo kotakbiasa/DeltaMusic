@@ -1,9 +1,9 @@
-# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2025 by Delta_Help @ Github, < https://github.com/TheTeamDelta >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Delta © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+TheTeamDelta is a project of Telegram bots with variety of purposes.
+Copyright (c) 2021 ~ Present Team Delta <https://github.com/TheTeamDelta>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -25,10 +25,10 @@ from pyrogram.types import (
 
 from config import BANNED_USERS, SONG_DOWNLOAD_DURATION, SONG_DOWNLOAD_DURATION_LIMIT
 from strings import get_command
-from AlexaMusic import YouTube, app
-from AlexaMusic.utils.decorators.language import language, languageCB
-from AlexaMusic.utils.formatters import convert_bytes
-from AlexaMusic.utils.inline.song import song_markup
+from DeltaMusic import YouTube, app
+from DeltaMusic.utils.decorators.language import language, languageCB
+from DeltaMusic.utils.formatters import convert_bytes
+from DeltaMusic.utils.inline.song import song_markup
 
 # Command
 SONG_COMMAND = get_command("SONG_COMMAND")
@@ -174,7 +174,7 @@ async def song_helper_cb(client, CallbackQuery, _):
             print(e)
             return await CallbackQuery.edit_message_text(_["song_7"])
         keyboard = InlineKeyboard()
-        # AVC Formats Only [ Alexa MUSIC BOT ]
+        # AVC Formats Only [ Delta MUSIC BOT ]
         done = [160, 133, 134, 135, 136, 137, 298, 299, 264, 304, 266]
         for x in formats_available:
             check = x["format"]

@@ -1,5 +1,5 @@
 {
-    "name": "Alexa Music",
+    "name": "Delta Music",
     "description": "Telegram streaming bot with some useful features, written in Python. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
     "logo": "https://telegra.ph/file/ba967503682a55beaedd3.png",
     "keywords": [
@@ -7,9 +7,9 @@
     "python3",
     "telegram",
     "bot",
-    "Alexa",
-    "alexamusic",
-    "alexamusicbot",
+    "Delta",
+    "deltamusic",
+    "deltamusicbot",
     "pytgcalls",
     "ntgcalls",
     "py-tgcalls",

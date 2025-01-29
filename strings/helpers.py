@@ -133,10 +133,10 @@ HELP_5 = """🥺**<u>Tambah & Hapus Pengguna Sudo:</u>**
 
 HELP_7 = """💌**<u>Fitur Baru:</u>**
 
-/alive : Sekarang Anda dapat memeriksa apakah bot musik Alexa hidup atau tidak
+/alive : Sekarang Anda dapat memeriksa apakah bot musik Delta hidup atau tidak
 /id : Untuk memeriksa id pengguna dan obrolan
 /gcast -user -assistant -pin testing broadcast`
-/verify : Verifikasi diri Anda di database Alexa"""
+/verify : Verifikasi diri Anda di database Delta"""
 
 HELP_8 = """💰**<u>Fitur Langganan Broadcast:</u>**
 

@@ -14,9 +14,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import ChatType, ChatMemberStatus
 from config import SUPPORT_GROUP, adminlist
 from strings import get_string
-from AlexaMusic import app
-from AlexaMusic.misc import SUDOERS
-from AlexaMusic.utils.database import (
+from DeltaMusic import app
+from DeltaMusic.misc import SUDOERS
+from DeltaMusic.utils.database import (
     get_authuser_names,
     get_cmode,
     get_lang,

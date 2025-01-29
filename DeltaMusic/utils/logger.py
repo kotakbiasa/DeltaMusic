@@ -12,8 +12,8 @@ as you want or you can collabe if you have new ideas.
 from pyrogram.enums import ParseMode
 
 from config import LOG_GROUP_ID
-from AlexaMusic.utils.database import is_on_off
-from AlexaMusic import app
+from DeltaMusic.utils.database import is_on_off
+from DeltaMusic import app
 
 
 async def play_logs(message, streamtype):

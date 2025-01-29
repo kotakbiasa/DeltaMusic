@@ -90,7 +90,7 @@ async def gen_thumb(videoid):
         name_font = ImageFont.truetype("assets/font.ttf", 30)
         para = textwrap.wrap(title, width=30)
         j = 0
-        draw.text((5, 5), f"Alexa MusicBot", fill="white", font=name_font)
+        draw.text((5, 5), f"Delta MusicBot", fill="white", font=name_font)
         draw.text(
             (600, 150),
             "NOW PLAYING",

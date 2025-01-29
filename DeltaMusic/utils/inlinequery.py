@@ -17,37 +17,37 @@ answer = []
 answer.extend(
     [
         InlineQueryResultArticle(
-            title="🙄 Pause 🙄",
+            title="Pause",
             description="Jeda aliran yang sedang diputar di video chat.",
             thumb_url="https://telegra.ph/file/9006f077e6596772e5864.jpg",
             input_message_content=InputTextMessageContent("/pause"),
         ),
         InlineQueryResultArticle(
-            title="😋 Resume 😋",
+            title="Resume",
             description="Lanjutkan aliran yang dijeda di video chat.",
             thumb_url="https://telegra.ph/file/9006f077e6596772e5864.jpg",
             input_message_content=InputTextMessageContent("/resume"),
         ),
         InlineQueryResultArticle(
-            title="🙂 Skip 🙂",
+            title="Skip",
             description="Lewati aliran yang sedang diputar di video chat dan pindah ke aliran berikutnya.",
             thumb_url="https://telegra.ph/file/9006f077e6596772e5864.jpg",
             input_message_content=InputTextMessageContent("/skip"),
         ),
         InlineQueryResultArticle(
-            title="🥺 End 🥺",
+            title="End",
             description="Akhiri aliran yang sedang diputar di video chat.",
             thumb_url="https://telegra.ph/file/9006f077e6596772e5864.jpg",
             input_message_content=InputTextMessageContent("/end"),
         ),
         InlineQueryResultArticle(
-            title="🥴 Shuffle 🥴",
+            title="Shuffle",
             description="Acak lagu-lagu yang ada di daftar putar.",
             thumb_url="https://telegra.ph/file/9006f077e6596772e5864.jpg",
             input_message_content=InputTextMessageContent("/shuffle"),
         ),
         InlineQueryResultArticle(
-            title="🥱 Loop 🥱",
+            title="Loop",
             description="Ulangi trek yang sedang diputar di video chat.",
             thumb_url="https://telegra.ph/file/9006f077e6596772e5864.jpg",
             input_message_content=InputTextMessageContent("/loop 3"),

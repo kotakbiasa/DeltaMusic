@@ -1,9 +1,9 @@
-# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2025 by Delta_Help @ Github, < https://github.com/TheTeamDelta >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Delta © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+TheTeamDelta is a project of Telegram bots with variety of purposes.
+Copyright (c) 2021 ~ Present Team Delta <https://github.com/TheTeamDelta>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -21,12 +21,12 @@ from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 import config
 from config import BANNED_USERS
 from strings import get_command
-from AlexaMusic import app
-from AlexaMusic.misc import db
-from AlexaMusic.utils import Alexabin, get_channeplayCB, seconds_to_min
-from AlexaMusic.utils.database import get_cmode, is_active_chat, is_music_playing
-from AlexaMusic.utils.decorators.language import language, languageCB
-from AlexaMusic.utils.inline import queue_back_markup, queue_markup
+from DeltaMusic import app
+from DeltaMusic.misc import db
+from DeltaMusic.utils import Deltabin, get_channeplayCB, seconds_to_min
+from DeltaMusic.utils.database import get_cmode, is_active_chat, is_music_playing
+from DeltaMusic.utils.decorators.language import language, languageCB
+from DeltaMusic.utils.inline import queue_back_markup, queue_markup
 
 ###Commands
 QUEUE_COMMAND = get_command("QUEUE_COMMAND")
@@ -199,7 +199,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             return await CallbackQuery.edit_message_text(msg, reply_markup=buttons)
         if "📌" in msg:
             msg = msg.replace("📌", "")
-        link = await Alexabin(msg)
+        link = await Deltabin(msg)
         med = InputMediaPhoto(media=link, caption=_["queue_3"].format(link))
         await CallbackQuery.edit_message_media(media=med, reply_markup=buttons)
     else:

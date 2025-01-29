@@ -16,7 +16,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from AlexaMusic.core.mongo import mongodb
+from DeltaMusic.core.mongo import mongodb
 
 from .logging import LOGGER
 

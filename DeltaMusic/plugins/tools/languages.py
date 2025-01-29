@@ -1,9 +1,9 @@
-# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2025 by Delta_Help @ Github, < https://github.com/TheTeamDelta >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Delta © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+TheTeamDelta is a project of Telegram bots with variety of purposes.
+Copyright (c) 2021 ~ Present Team Delta <https://github.com/TheTeamDelta>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -16,9 +16,9 @@ from pyrogram.types import InlineKeyboardButton, Message
 
 from config import BANNED_USERS
 from strings import get_command, get_string
-from AlexaMusic import app
-from AlexaMusic.utils.database import get_lang, set_lang
-from AlexaMusic.utils.decorators import ActualAdminCB, language, languageCB
+from DeltaMusic import app
+from DeltaMusic.utils.database import get_lang, set_lang
+from DeltaMusic.utils.decorators import ActualAdminCB, language, languageCB
 
 # Languages Available
 
@@ -27,12 +27,12 @@ def lanuages_keyboard(_):
     keyboard = InlineKeyboard(row_width=2)
     keyboard.row(
         InlineKeyboardButton(
-            text="🇦🇺 English ",
-            callback_data=f"languages:en",
-        ),
-        InlineKeyboardButton(
             text="🇮🇩 Indonesia",
             callback_data=f"languages:id",
+        ),
+        InlineKeyboardButton(
+            text="🇦🇺 English ",
+            callback_data=f"languages:en",
         ),
     )
     keyboard.row(

@@ -1,9 +1,9 @@
-# Copyright (C) 2025 by Alexa_Help @ Github, < https://github.com/TheTeamAlexa >
-# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Alexa © Yukki.
+# Copyright (C) 2025 by Delta_Help @ Github, < https://github.com/TheTeamDelta >
+# Subscribe On YT < Jankari Ki Duniya >. All rights reserved. © Delta © Yukki.
 
 """"
-TheTeamAlexa is a project of Telegram bots with variety of purposes.
-Copyright (c) 2021 ~ Present Team Alexa <https://github.com/TheTeamAlexa>
+TheTeamDelta is a project of Telegram bots with variety of purposes.
+Copyright (c) 2021 ~ Present Team Delta <https://github.com/TheTeamDelta>
 
 This program is free software: you can redistribute it and can modify
 as you want or you can collabe if you have new ideas.
@@ -23,11 +23,11 @@ from pytgcalls.__version__ import __version__ as pytgver
 import config
 from config import BANNED_USERS, MUSIC_BOT_NAME
 from strings import get_command
-from AlexaMusic import YouTube, app
-from AlexaMusic.core.userbot import assistants
-from AlexaMusic.misc import SUDOERS, mongodb
-from AlexaMusic.plugins import ALL_MODULES
-from AlexaMusic.utils.database import (
+from DeltaMusic import YouTube, app
+from DeltaMusic.core.userbot import assistants
+from DeltaMusic.misc import SUDOERS, mongodb
+from DeltaMusic.plugins import ALL_MODULES
+from DeltaMusic.utils.database import (
     get_global_tops,
     get_particulars,
     get_queries,
@@ -37,8 +37,8 @@ from AlexaMusic.utils.database import (
     get_top_chats,
     get_topp_users,
 )
-from AlexaMusic.utils.decorators.language import language, languageCB
-from AlexaMusic.utils.inline.stats import (
+from DeltaMusic.utils.decorators.language import language, languageCB
+from DeltaMusic.utils.inline.stats import (
     back_stats_buttons,
     back_stats_markup,
     get_stats_markup,
@@ -178,9 +178,9 @@ async def top_users_ten(client, CallbackQuery: CallbackQuery, _):
                 details = stats.get(items)
                 title = (details["title"][:35]).title()
                 if items == "telegram":
-                    msg += f"🌹 [Media Telegram](https://t.me/Shayri_Music_Lovers) ** dimainkan {count} kali**\n\n"
+                    msg += f"[Media Telegram](https://t.me/Shayri_Music_Lovers) ** dimainkan {count} kali**\n\n"
                 else:
-                    msg += f"🌹 [{title}](https://www.youtube.com/watch?v={items}) ** dimainkan {count} kali**\n\n"
+                    msg += f"[{title}](https://www.youtube.com/watch?v={items}) ** dimainkan {count} kali**\n\n"
 
             temp = (
                 _["gstats_4"].format(
@@ -218,7 +218,7 @@ async def top_users_ten(client, CallbackQuery: CallbackQuery, _):
             except:
                 continue
             limit += 1
-            msg += f"💖 `{extract}` dimainkan {count} kali di bot.\n\n"
+            msg += f"`{extract}` dimainkan {count} kali di bot.\n\n"
         temp = (
             _["gstats_5"].format(limit, MUSIC_BOT_NAME)
             if what == "Chats"
@@ -264,23 +264,23 @@ async def overall_stats(client, CallbackQuery, _):
     else:
         ass = "No"
     cm = config.CLEANMODE_DELETE_MINS
-    text = f"""🌹 **Statistik dan Info Bot:**
+    text = f"""**Statistik dan Info Bot:**
 
-🌹 **Modul:** {mod}
-🌹 **Obrolan:** {served_chats} 
-🌹 **Pengguna:** {served_users} 
-🌹 **Diblokir:** {blocked} 
-🌹 **Sudoers:** {sudoers} 
+**Modul:** {mod}
+**Obrolan:** {served_chats} 
+**Pengguna:** {served_users} 
+**Diblokir:** {blocked} 
+**Sudoers:** {sudoers} 
     
-🌹 **Kueri:** {total_queries} 
-🌹 **Asisten:** {assistant}
-🌹 **Asisten Auto Tinggalkan:** {ass}
-🌹 **Mode Bersih:** {cm} menit
+**Kueri:** {total_queries} 
+**Asisten:** {assistant}
+**Asisten Auto Tinggalkan:** {ass}
+**Mode Bersih:** {cm} menit
 
-🌹 **Batas Durasi:** {play_duration} menit
-🌹 **Batas Unduhan:** {song} menit
-🌹 **Batas Daftar Putar:** {playlist_limit}
-🌹 **Batas Putar Daftar Putar:** {fetch_playlist}"""
+**Batas Durasi:** {play_duration} menit
+**Batas Unduhan:** {song} menit
+**Batas Daftar Putar:** {playlist_limit}
+**Batas Putar Daftar Putar:** {fetch_playlist}"""
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
         await CallbackQuery.edit_message_media(media=med, reply_markup=upl)
@@ -337,38 +337,38 @@ async def overall_stats(client, CallbackQuery, _):
     total_queries = await get_queries()
     blocked = len(BANNED_USERS)
     sudoers = len(await get_sudoers())
-    text = f"""🌹 **Statistik dan Info Bot:**
+    text = f"""**Statistik dan Info Bot:**
 
-       <b><u>🌹 Perangkat Keras</b><u/>
-🌹 **Modul:** {mod}
-🌹 **Platform:** {sc}
-🌹 **RAM:** {ram}
-🌹 **Core Fisik:** {p_core}
-🌹 **Total Core:** {t_core}
-🌹 **Frekuensi CPU:** {cpu_freq}
+       <b><u> Perangkat Keras</b><u/>
+**Modul:** {mod}
+**Platform:** {sc}
+**RAM:** {ram}
+**Core Fisik:** {p_core}
+**Total Core:** {t_core}
+**Frekuensi CPU:** {cpu_freq}
 
-       <b><u>🌹 Perangkat Lunak</b><u/>
-🌹 **Python:** {pyver.split()[0]}
-🌹 **Pyrogram:** {pyrover}
-🌹 **Py-TgCalls:** {pytgver}
+       <b><u> Perangkat Lunak</b><u/>
+**Python:** {pyver.split()[0]}
+**Pyrogram:** {pyrover}
+**Py-TgCalls:** {pytgver}
 
-        <b><u>🌹 Penyimpanan</b><u/>
-🌹 **Tersedia:** {total[:4]} GiB
-🌹 **Terpakai:** {used[:4]} GiB
-🌹 **Bebas:** {free[:4]} GiB
+        <b><u> Penyimpanan</b><u/>
+**Tersedia:** {total[:4]} GiB
+**Terpakai:** {used[:4]} GiB
+**Bebas:** {free[:4]} GiB
 
-      <b><u>🌹 Statistik Saat Ini</b><u/>
-🌹 **Obrolan:** {served_chats} 
-🌹 **Pengguna:** {served_users} 
-🌹 **Diblokir:** {blocked} 
-🌹 **Sudoers:** {sudoers} 
+      <b><u> Statistik Saat Ini</b><u/>
+**Obrolan:** {served_chats} 
+**Pengguna:** {served_users} 
+**Diblokir:** {blocked} 
+**Sudoers:** {sudoers} 
 
-      <b><u>🌹 Basis Data Mongo</b><u/>
-🌹 **Ukuran:** {datasize[:6]} MB
-🌹 **Penyimpanan:** {storage} MB
-🌹 **Koleksi:** {collections}
-🌹 **Kunci:** {objects}
-🌹 **Kueri Bot:** `{total_queries}`
+      <b><u> Basis Data Mongo</b><u/>
+**Ukuran:** {datasize[:6]} MB
+**Penyimpanan:** {storage} MB
+**Koleksi:** {collections}
+**Kunci:** {objects}
+**Kueri Bot:** `{total_queries}`
     """
     med = InputMediaPhoto(media=config.STATS_IMG_URL, caption=text)
     try:
