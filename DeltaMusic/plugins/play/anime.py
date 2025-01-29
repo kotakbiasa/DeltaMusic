@@ -1,4 +1,7 @@
 import requests
+from telegram import Update, Bot
+from telegram.ext import Updater, CommandHandler, CallbackContext
+from DeltaMusic.resources import get_telegram_bot_token
 
 def get_anime_streaming_url(title, episode):
     # Define the API endpoint for searching the anime
@@ -30,16 +33,40 @@ def get_anime_streaming_url(title, episode):
     else:
         return None
 
-def play_anime(title, episode):
+def play_anime(update: Update, context: CallbackContext):
+    if len(context.args) != 2:
+        update.message.reply_text("Usage: /play_anime <title> <episode>")
+        return
+    
+    title = context.args[0]
+    episode = context.args[1]
+    
     # Get the streaming URL
     streaming_url = get_anime_streaming_url(title, episode)
     
     if streaming_url:
-        # Code to play the anime using the streaming URL
-        print(f"Playing {title} Episode {episode}: {streaming_url}")
-        # ...existing code to handle the streaming...
+        # Send the streaming URL to the user
+        update.message.reply_text(f"Playing {title} Episode {episode}: {streaming_url}")
     else:
-        print(f"Failed to retrieve streaming URL for {title} Episode {episode}")
+        update.message.reply_text(f"Failed to retrieve streaming URL for {title} Episode {episode}")
+
+def list_ongoing(update: Update, context: CallbackContext):
+    ongoing_anime = get_ongoing_anime()
+    update.message.reply_text(ongoing_anime)
+
+def list_complete(update: Update, context: CallbackContext):
+    complete_anime = get_complete_anime()
+    update.message.reply_text(complete_anime)
+
+def list_genre(update: Update, context: CallbackContext):
+    if len(context.args) != 2:
+        update.message.reply_text("Usage: /list_genre <genre_id> <page>")
+        return
+    
+    genre_id = context.args[0]
+    page = context.args[1]
+    genre_anime = get_genre_anime(genre_id, page)
+    update.message.reply_text(genre_anime)
 
 def get_ongoing_anime():
     ongoing_url = "https://unofficial-otakudesu-api-ruang-kreatif.vercel.app/api/ongoing"
@@ -66,36 +93,18 @@ def get_genre_anime(genre_id, page):
         return None
 
 def main():
-    import sys
-    if len(sys.argv) < 2:
-        print("Usage: python anime.py <command> [<args>]")
-        return
+    # Get the Telegram bot token from DeltaMusic resources
+    bot_token = get_telegram_bot_token()
+    updater = Updater(bot_token, use_context=True)
+    dp = updater.dispatcher
     
-    command = sys.argv[1]
+    dp.add_handler(CommandHandler("play_anime", play_anime))
+    dp.add_handler(CommandHandler("list_ongoing", list_ongoing))
+    dp.add_handler(CommandHandler("list_complete", list_complete))
+    dp.add_handler(CommandHandler("list_genre", list_genre))
     
-    if command == "play":
-        if len(sys.argv) != 4:
-            print("Usage: python anime.py play <title> <episode>")
-            return
-        title = sys.argv[2]
-        episode = sys.argv[3]
-        play_anime(title, episode)
-    elif command == "ongoing":
-        ongoing_anime = get_ongoing_anime()
-        print(ongoing_anime)
-    elif command == "complete":
-        complete_anime = get_complete_anime()
-        print(complete_anime)
-    elif command == "genre":
-        if len(sys.argv) != 4:
-            print("Usage: python anime.py genre <genre_id> <page>")
-            return
-        genre_id = sys.argv[2]
-        page = sys.argv[3]
-        genre_anime = get_genre_anime(genre_id, page)
-        print(genre_anime)
-    else:
-        print("Unknown command")
+    updater.start_polling()
+    updater.idle()
 
 if __name__ == "__main__":
     main()
