@@ -14,6 +14,7 @@ from typing import Union
 
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
+from pyrogram.errors import MessageNotModified
 
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
@@ -47,7 +48,10 @@ async def helper_private(
             await update.message.delete()
             await update.message.reply_text(_["help_1"], reply_markup=keyboard)
         else:
-            await update.edit_message_text(_["help_1"], reply_markup=keyboard)
+            try:
+                await update.edit_message_text(_["help_1"], reply_markup=keyboard)
+            except MessageNotModified:
+                pass
     else:
         chat_id = update.chat.id
         if await is_commanddelete_on(update.chat.id):
