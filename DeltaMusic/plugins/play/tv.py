@@ -61,7 +61,7 @@ async def tv_channel_callback(client, callback_query):
         chat_id = callback_query.message.chat.id
         channel = None
 
-        video = None
+        video = True
         mystic = await callback_query.message.reply_text(
             _["play_2"].format(channel) if channel else _["play_1"]
         )
@@ -87,7 +87,7 @@ async def tv_channel_callback(client, callback_query):
         await callback_query.answer("Siaran tidak ditemukan!", show_alert=True)
 
 @app.on_message(
-    filters.command(["tvplayforce", "tv", "ctv"])
+    filters.command(["vplay", "tvplayforce", "tv", "ctv"])
     & filters.group
     & ~BANNED_USERS
 )
@@ -196,7 +196,7 @@ async def tv(client, message: Message):
             chat_id = message.chat.id
             channel = None
 
-        video = None
+        video = True
         mystic = await message.reply_text(
             _["play_2"].format(channel) if channel else _["play_1"]
         )
