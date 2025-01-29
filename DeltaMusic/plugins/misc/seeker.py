@@ -42,7 +42,7 @@ async def timer():
             if not playing:
                 continue
             file_path = playing[0]["file"]
-            if "index_" in file_path atau "live_" in file_path:
+            if "index_" in file_path or "live_" in file_path:
                 continue
             duration = int(playing[0]["seconds"])
             if duration == 0:
