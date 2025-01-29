@@ -54,7 +54,7 @@ async def radio_station_callback(client, callback_query):
         playmode = await get_playmode(callback_query.message.chat.id)
         playty = await get_playtype(callback_query.message.chat.id)
         if playty != "Everyone":
-            if callback_query.from_user.id not in SUDOERS:
+            if callback_query.from_user and callback_query.from_user.id not in SUDOERS:
                 admins = adminlist.get(callback_query.message.chat.id)
                 if not admins:
                     return await callback_query.answer(_["admin_25"], show_alert=True)
