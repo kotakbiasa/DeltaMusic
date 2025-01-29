@@ -1,4 +1,4 @@
-HELP_1 = """🙄**<u>Perintah Admin:</u>**
+HELP_1 = """👤**<u>Perintah Admin:</u>**
 
 Tambahkan **c** di awal perintah untuk menggunakannya untuk saluran.
 
@@ -27,9 +27,9 @@ Pengguna auth dapat menggunakan hak admin di bot tanpa hak admin di obrolan.
 /authusers : Tampilkan daftar pengguna auth bot."""
 
 
-HELP_2 = """💞<u>**Perintah Putar:</u>**
+HELP_2 = """⏯️<u>**Perintah Putar:</u>**
 
-Perintah yang tersedia = play, vplay, cplay
+Perintah yang tersedia = play, vplay, cplay, radio
 
 Perintah forceplay = playforce, vplayforce, cplayforce
 
@@ -43,6 +43,7 @@ Perintah forceplay = playforce, vplayforce, cplayforce
 
 /channelplay [username obrolan atau id] atau [disable] : Hubungkan saluran ke grup dan mulai streaming lagu dengan bantuan perintah yang dikirim di grup.
 
+/radio [nama stasiun] : Mulai streaming radio di obrolan suara.
 
 🤨**<u>Daftar Putar Server:</u>**
 
@@ -51,7 +52,7 @@ Perintah forceplay = playforce, vplayforce, cplayforce
 /play  : Mulai memutar dari daftar putar yang disimpan di server."""
 
 
-HELP_3 = """😉<u>**Perintah Bot:</u>**
+HELP_3 = """🤖<u>**Perintah Bot:</u>**
 
 /stats : Dapatkan statistik global 10 lagu teratas, 10 pengguna teratas bot, 10 obrolan teratas bot, 10 lagu teratas yang diputar di obrolan, dan banyak lagi...
 /sudolist : Tampilkan pengguna sudo bot musik.

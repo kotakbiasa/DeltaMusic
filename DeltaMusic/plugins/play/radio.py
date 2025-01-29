@@ -25,15 +25,15 @@ from DeltaMusic.utils.logger import play_logs
 from DeltaMusic.utils.stream.stream import stream
 
 RADIO_STATION = {
-    "Air Bilaspur": "http://air.pc.cdn.bitgravity.com/air/live/pbaudio110/playlist.m3u8",
-    "Air Raipur": "http://air.pc.cdn.bitgravity.com/air/live/pbaudio118/playlist.m3u8",
-    "Capital FM": "http://media-ice.musicradio.com/CapitalMP3?.mp3&listening-from-radio-garden=1616312105154",
-    "English": "https://hls-01-regions.emgsound.ru/11_msk/playlist.m3u8",
-    "Mirchi": "http://peridot.streamguys.com:7150/Mirchi",
-    "Radio Today": "http://stream.zenolive.com/8wv4d8g4344tv",
-    "YouTube": "https://www.youtube.com/live/eu191hR_LEc?si=T-9QYD548jd0Mogp",
-    "Zee News": "https://www.youtube.com/live/TPcmrPrygDc?si=hiHBkIidgurQAd1P",
-    "Aaj Tak": "https://www.youtube.com/live/Nq2wYlWFucg?si=usY4UYiSBInKA0S1",
+    "The Rockin Life": "https://n10.radiojar.com/7csmg90fuqruv?rj-ttl=5&rj-tok=AAABlLLRtm0A79_IvCfOpTBeBw",
+    "i-Radio": "https://n0d.radiojar.com/4ywdgup3bnzuv?rj-ttl=5&rj-tok=AAABlLLWuAUAXZtQLiTbz29MeA",
+    "Radio Elshinta": "https://stream-ssl.arenastreaming.com:8000/jakarta.m3u",
+    "90.4 FM": "https://stream.radiojar.com/u7d8heq3bnzuv",
+    "OZ Radio": "https://streaming.ozradiojakarta.com:8443/ozjakarta",
+    "Radio Sonora": "https://streaming.brol.tech/rtfmlounge",
+    "Hot 93.2 FM": "https://wz.mari.co.id:1936/web_hotfm/hotfm/playlist.m3u8",
+    "KISI FM": "http://live.serverstreaming.net:9340/kisifm",
+    "Smart FM": "https://streaming.brol.tech/rtfmlounge",
 }
 
 valid_stations = "\n".join([f"`{name}`" for name in sorted(RADIO_STATION.keys())])
@@ -80,7 +80,7 @@ async def radio(client, message: Message):
                         f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{ex}`"
                     )
             except Exception as ex:
-                if "channels.JoinChannel" in str(ex) or "Username not found" in str(ex):
+                if "channels.JoinChannel" in str(ex) or "Username tidak ditemukan" in str(ex):
                     return await msg.edit_text(
                         f"Saya tidak memiliki izin untuk mengundang pengguna melalui tautan untuk mengundang {userbot.mention} asisten ke {message.chat.title}."
                     )
@@ -109,7 +109,7 @@ async def radio(client, message: Message):
                     f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{ex}`"
                 )
         except Exception as ex:
-            if "channels.JoinChannel" in str(ex) or "Username not found" in str(ex):
+            if "channels.JoinChannel" in str(ex) or "Username tidak ditemukan" in str(ex):
                 return await msg.edit_text(
                     f"Saya tidak memiliki izin untuk mengundang pengguna melalui tautan untuk mengundang {userbot.mention} asisten ke {message.chat.title}."
                 )

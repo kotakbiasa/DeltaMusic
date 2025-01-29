@@ -13,8 +13,7 @@ as you want or you can collabe if you have new ideas.
 from typing import Union
 
 from pyrogram import filters, types
-from pyrogram.types import InlineKeyboardMarkup, Message
-from pyrogram.errors import MessageNotModified
+from pyrogram.types import InlineKeyboardMarkup, Message, CallbackQuery
 
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
@@ -48,10 +47,7 @@ async def helper_private(
             await update.message.delete()
             await update.message.reply_text(_["help_1"], reply_markup=keyboard)
         else:
-            try:
-                await update.edit_message_text(_["help_1"], reply_markup=keyboard)
-            except MessageNotModified:
-                pass
+            await update.edit_message_text(_["help_1"], reply_markup=keyboard)
     else:
         chat_id = update.chat.id
         if await is_commanddelete_on(update.chat.id):
