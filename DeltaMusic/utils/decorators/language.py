@@ -13,6 +13,7 @@ as you want or you can collabe if you have new ideas.
 from strings import get_string
 from DeltaMusic.misc import SUDOERS
 from DeltaMusic.utils.database import get_lang, is_commanddelete_on, is_maintenance
+from DeltaMusic import app
 from pyrogram.enums import ChatMemberStatus
 from pyrogram.types import Message
 
