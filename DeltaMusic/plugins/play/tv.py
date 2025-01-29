@@ -82,7 +82,10 @@ async def tv_channel_callback(client, callback_query):
             err = e if ex_type == "AssistantErr" else _["general_4"].format(ex_type)
             return await mystic.edit_text(err)
         await play_logs(callback_query.message, streamtype="M3u8 or Index Link")
-        await callback_query.answer()
+        try:
+            await callback_query.answer()
+        except pyrogram.errors.exceptions.bad_request_400.QueryIdInvalid:
+            pass
     else:
         await callback_query.answer("Siaran tidak ditemukan!", show_alert=True)
 

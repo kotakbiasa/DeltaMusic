@@ -29,9 +29,9 @@ Pengguna auth dapat menggunakan hak admin di bot tanpa hak admin di obrolan.
 
 HELP_2 = """⏯️<u>**Perintah Putar:</u>**
 
-Perintah yang tersedia = play, vplay, cplay, radio
+Perintah yang tersedia = play, vplay, cplay, radio, tv
 
-Perintah forceplay = playforce, vplayforce, cplayforce
+Perintah forceplay = playforce, vplayforce, cplayforce, radioplayforce, tvplayforce
 
 **c** berarti putar saluran.
 **v** berarti putar video.
@@ -44,6 +44,8 @@ Perintah forceplay = playforce, vplayforce, cplayforce
 /channelplay [username obrolan atau id] atau [disable] : Hubungkan saluran ke grup dan mulai streaming lagu dengan bantuan perintah yang dikirim di grup.
 
 /radio [nama stasiun] : Mulai streaming radio di obrolan suara.
+
+/tv [nama saluran] : Mulai streaming saluran TV di obrolan suara.
 
 🤨**<u>Daftar Putar Server:</u>**
 
