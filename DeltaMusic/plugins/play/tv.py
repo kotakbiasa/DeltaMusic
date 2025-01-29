@@ -31,6 +31,9 @@ TV_CHANNEL = {
     "KompasTV": "http://op-group1-swiftservehd-1.dens.tv/h/h234/01.m3u8",
     "One Piece": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f7790b3ed0c88000720b241/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a7816-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=4b38ba42-6f97-4a17-b657-1277978d366c",
     "CNN Indonesia": "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/master.m3u8",
+    "Indosiar": "http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8",
+    "ANTV": "http://op-group1-swiftservehd-1.dens.tv/h/h235/02.m3u8",
+    "MDTV": "http://op-group1-swiftservehd-1.dens.tv/h/h223/02.m3u8",
 
 }
 
