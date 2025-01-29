@@ -123,7 +123,7 @@ PLAYLIST_IMG_URL = getenv(
 
 GLOBAL_IMG_URL = getenv(
     "GLOBAL_IMG_URL",
-    "assets/Global.jpe",
+    "assets/Global.jpg",
 )
 
 STATS_IMG_URL = getenv(
