@@ -1,7 +1,7 @@
 import requests
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from DeltaMusic.config import API_ID, API_HASH, BOT_TOKEN
+from config import API_ID, API_HASH, BOT_TOKEN
 
 def get_anime_streaming_url(title, episode):
     # Define the API endpoint for searching the anime
