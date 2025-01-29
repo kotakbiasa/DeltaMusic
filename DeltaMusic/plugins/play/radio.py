@@ -179,3 +179,57 @@ async def radio(client, message: Message):
             "Berikan saya nama stasiun untuk memutar radio",
             reply_markup=get_station_buttons()
         )
+
+
+@app.on_callback_query(filters.regex(r"^radio_station_"))
+async def radio_station_callback(client, callback_query):
+    station_name = callback_query.data.split("_", 2)[2]
+    RADIO_URL = RADIO_STATION.get(station_name)
+    if RADIO_URL:
+        language = await get_lang(callback_query.message.chat.id)
+        _ = get_string(language)
+        playmode = await get_playmode(callback_query.message.chat.id)
+        playty = await get_playtype(callback_query.message.chat.id)
+        if playty != "Everyone":
+            if callback_query.from_user.id not in SUDOERS:
+                admins = adminlist.get(callback_query.message.chat.id)
+                if not admins:
+                    return await callback_query.answer(_["admin_25"], show_alert=True)
+                else:
+                    if callback_query.from_user.id not in admins:
+                        return await callback_query.answer(_["play_4"], show_alert=True)
+        if callback_query.message.command[0][0] == "c":
+            chat_id = await get_cmode(callback_query.message.chat.id)
+            try:
+                chat = await app.get_chat(chat_id)
+            except:
+                return await callback_query.answer(_["cplay_4"], show_alert=True)
+            channel = chat.title
+        else:
+            chat_id = callback_query.message.chat.id
+            channel = None
+
+        video = None
+        mystic = await callback_query.message.reply_text(
+            _["play_2"].format(channel) if channel else _["play_1"]
+        )
+        try:
+            await stream(
+                _,
+                mystic,
+                callback_query.from_user.id,
+                RADIO_URL,
+                chat_id,
+                callback_query.from_user.mention,
+                callback_query.message.chat.id,
+                video=video,
+                streamtype="index",
+            )
+        except Exception as e:
+            ex_type = type(e).__name__
+            err = e if ex_type == "AssistantErr" else _["general_4"].format(ex_type)
+            return await mystic.edit_text(err)
+        await play_logs(callback_query.message, streamtype="M3u8 or Index Link")
+        await callback_query.answer()
+    else:
+        await callback_query.answer("Stasiun tidak ditemukan!", show_alert=True)
