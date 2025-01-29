@@ -39,22 +39,22 @@ async def testspeed(m):
 
 @app.on_message(filters.command(SPEEDTEST_COMMAND) & SUDOERS)
 async def speedtest_function(client, message):
-    m = await message.reply_text("» Menjalankan Tes Kecepatan ...")
+    m = await message.reply_text("🚀 Menjalankan Tes Kecepatan ...")
     result = await testspeed(m)
     if isinstance(result, dict):
         output = f"""🌐 <b>Hasil SpeedTest</b>
 
-    <u><b>Klien :</b></u>
-    <b>ISP :</b> {result['client']['isp']}
-    <b>Negara :</b> {result['client']['country']}
+<u><b>Klien :</b></u>
+<b>ISP :</b> {result['client']['isp']}
+<b>Negara :</b> {result['client']['country']}
 
-    <u><b>Server :</b></u>
-    <b>Nama :</b> {result['server']['name']}
-    <b>Negara :</b> {result['server']['country']}, {result['server']['cc']}
-    <b>Sponsor :</b> {result['server']['sponsor']}
-    <b>Latensi :</b> {result['server']['latency']} 
-    <b>Ping :</b> {result['ping']}
-    """
+<u><b>Server :</b></u>
+<b>Nama :</b> {result['server']['name']}
+<b>Negara :</b> {result['server']['country']}, {result['server']['cc']}
+<b>Sponsor :</b> {result['server']['sponsor']}
+<b>Latensi :</b> {result['server']['latency']} 
+<b>Ping :</b> {result['ping']}
+"""
         msg = await app.send_photo(
             chat_id=message.chat.id, photo=result["share"], caption=output
         )
