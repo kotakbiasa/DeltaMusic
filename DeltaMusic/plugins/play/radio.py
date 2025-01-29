@@ -179,7 +179,3 @@ async def radio(client, message: Message):
             "Berikan saya nama stasiun untuk memutar radio",
             reply_markup=get_station_buttons()
         )
-
-
-__MODULE__ = "Radio"
-__HELP__ = f"\n/radio [nama stasiun] - untuk memutar **radio di obrolan suara**\n\nBerikut adalah beberapa nama stasiun:\n{valid_stations}"
