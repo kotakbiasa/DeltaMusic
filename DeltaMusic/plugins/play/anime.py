@@ -1,7 +1,7 @@
 import requests
-from telegram import Update, Bot
-from telegram.ext import Updater, CommandHandler, CallbackContext
-from DeltaMusic.resources import get_telegram_bot_token
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from DeltaMusic.resources import get_pyrogram_api_id, get_pyrogram_api_hash, get_pyrogram_bot_token
 
 def get_anime_streaming_url(title, episode):
     # Define the API endpoint for searching the anime
@@ -33,41 +33,6 @@ def get_anime_streaming_url(title, episode):
     else:
         return None
 
-def play_anime(update: Update, context: CallbackContext):
-    if len(context.args) != 2:
-        update.message.reply_text("Usage: /play_anime <title> <episode>")
-        return
-    
-    title = context.args[0]
-    episode = context.args[1]
-    
-    # Get the streaming URL
-    streaming_url = get_anime_streaming_url(title, episode)
-    
-    if streaming_url:
-        # Send the streaming URL to the user
-        update.message.reply_text(f"Playing {title} Episode {episode}: {streaming_url}")
-    else:
-        update.message.reply_text(f"Failed to retrieve streaming URL for {title} Episode {episode}")
-
-def list_ongoing(update: Update, context: CallbackContext):
-    ongoing_anime = get_ongoing_anime()
-    update.message.reply_text(ongoing_anime)
-
-def list_complete(update: Update, context: CallbackContext):
-    complete_anime = get_complete_anime()
-    update.message.reply_text(complete_anime)
-
-def list_genre(update: Update, context: CallbackContext):
-    if len(context.args) != 2:
-        update.message.reply_text("Usage: /list_genre <genre_id> <page>")
-        return
-    
-    genre_id = context.args[0]
-    page = context.args[1]
-    genre_anime = get_genre_anime(genre_id, page)
-    update.message.reply_text(genre_anime)
-
 def get_ongoing_anime():
     ongoing_url = "https://unofficial-otakudesu-api-ruang-kreatif.vercel.app/api/ongoing"
     response = requests.get(ongoing_url)
@@ -92,19 +57,79 @@ def get_genre_anime(genre_id, page):
     else:
         return None
 
+def handle_anime_command(client, message):
+    args = message.text.split()
+    if len(args) < 2:
+        message.reply_text("Usage: /command <args>")
+        return
+    
+    command = args[0]
+    
+    if command == "/play_anime":
+        if len(args) != 3:
+            message.reply_text("Usage: /play_anime <title> <episode>")
+            return
+        title = args[1]
+        episode = args[2]
+        streaming_url = get_anime_streaming_url(title, episode)
+        if streaming_url:
+            message.reply_text(f"Playing {title} Episode {episode}: {streaming_url}")
+        else:
+            message.reply_text(f"Failed to retrieve streaming URL for {title} Episode {episode}")
+    elif command == "/list_ongoing":
+        ongoing_anime = get_ongoing_anime()
+        message.reply_text(ongoing_anime)
+    elif command == "/list_complete":
+        complete_anime = get_complete_anime()
+        message.reply_text(complete_anime)
+    elif command == "/list_genre":
+        if len(args) != 3:
+            message.reply_text("Usage: /list_genre <genre_id> <page>")
+            return
+        genre_id = args[1]
+        page = args[2]
+        genre_anime = get_genre_anime(genre_id, page)
+        message.reply_text(genre_anime)
+    else:
+        message.reply_text("Unknown command")
+
+def start(client, message):
+    keyboard = [
+        [InlineKeyboardButton("Play Anime", callback_data="play_anime")],
+        [InlineKeyboardButton("List Ongoing", callback_data="list_ongoing")],
+        [InlineKeyboardButton("List Complete", callback_data="list_complete")],
+        [InlineKeyboardButton("List Genre", callback_data="list_genre")]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    message.reply_text("Choose an option:", reply_markup=reply_markup)
+
+def button(client, callback_query):
+    data = callback_query.data
+    if data == "play_anime":
+        callback_query.message.reply_text("Usage: /play_anime <title> <episode>")
+    elif data == "list_ongoing":
+        ongoing_anime = get_ongoing_anime()
+        callback_query.message.reply_text(ongoing_anime)
+    elif data == "list_complete":
+        complete_anime = get_complete_anime()
+        callback_query.message.reply_text(complete_anime)
+    elif data == "list_genre":
+        callback_query.message.reply_text("Usage: /list_genre <genre_id> <page>")
+    else:
+        callback_query.message.reply_text("Unknown command")
+
 def main():
-    # Get the Telegram bot token from DeltaMusic resources
-    bot_token = get_telegram_bot_token()
-    updater = Updater(bot_token, use_context=True)
-    dp = updater.dispatcher
+    api_id = get_pyrogram_api_id()
+    api_hash = get_pyrogram_api_hash()
+    bot_token = get_pyrogram_bot_token()
     
-    dp.add_handler(CommandHandler("play_anime", play_anime))
-    dp.add_handler(CommandHandler("list_ongoing", list_ongoing))
-    dp.add_handler(CommandHandler("list_complete", list_complete))
-    dp.add_handler(CommandHandler("list_genre", list_genre))
+    app = Client("anime_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
     
-    updater.start_polling()
-    updater.idle()
+    app.add_handler(filters.command("start")(start))
+    app.add_handler(filters.command(["play_anime", "list_ongoing", "list_complete", "list_genre"])(handle_anime_command))
+    app.add_handler(filters.callback_query()(button))
+    
+    app.run()
 
 if __name__ == "__main__":
     main()
