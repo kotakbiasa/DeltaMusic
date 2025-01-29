@@ -241,6 +241,8 @@ stream_2 : "➜ <b>Mulai Streaming </b>\n\n<b>‣ Jenis Streaming :</b> Siaran L
 stream_3 : "➻ **Mulai Memutar** «\n\n**Judul:** {0}\n🕕 **Durasi:** {1}\n**Diminta oleh:** {2} "
 stream_4 : "➻ **Mulai Memutar** «\n\n**Judul:** [{0}]({1})\n🕕 **Durasi:** {2}\n**Diminta oleh:** {3} "
 
+server_1 : "✯ <b>Hasil Tes Kecepatan</b> ✯\n\n<u><b>Klien :</b></u>\n<b>» ISP :</b> {0}\n<b>» Negara :</b> {1}\n\n<u><b>Server :</b></u>\n<b>» Nama :</b> {2}\n<b>» Negara :</b> {3}, {4}\n<b>» Sponsor :</b> {5}\n<b>» Latensi :</b> {6}\n<b>» Ping :</b> {7}"
+
 # Inline Buttons
 
 #General Buttons

@@ -240,6 +240,8 @@ stream_2 : "➜ <b>Started Streaming </b>\n\n<b>‣ Stream Type :</b> Live Strea
 stream_3 : "➻ **Started Playing** «\n\n🥀 **Title:** {0}\n🕕 **Duration:** {1}\n🌹 **Requested By:** {2} "
 stream_4 : "➻ **Started Playing** «\n\n🌹 **Title:** [{0}]({1})\n🕕 **Duration:** {2}\n🌹 **Requested By:** {3} "
 
+server_1 : "✯ <b>Speedtest Results</b> ✯\n\n<u><b>Client :</b></u>\n<b>» ISP :</b> {0}\n<b>» Country :</b> {1}\n\n<u><b>Server :</b></u>\n<b>» Name :</b> {2}\n<b>» Country :</b> {3}, {4}\n<b>» Sponsor :</b> {5}\n<b>» Latency :</b> {6}\n<b>» Ping :</b> {7}"
+
 # Inline Buttons
 
 #General Buttons
