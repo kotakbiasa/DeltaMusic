@@ -181,7 +181,7 @@ async def tv(client, message: Message):
         playmode = await get_playmode(message.chat.id)
         playty = await get_playtype(message.chat.id)
         if playty != "Everyone":
-            if message.from_user.id not in SUDOERS:
+            if message.from_user and message.from_user.id not in SUDOERS:
                 admins = adminlist.get(message.chat.id)
                 if not admins:
                     return await message.reply_text(_["admin_25"])
