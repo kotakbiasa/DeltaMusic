@@ -209,7 +209,7 @@ if GITHUB_REPO:
 
 
 if PING_IMG_URL:
-    if PING_IMG_URL != "assets/Ping.jpeg":
+    if PING_IMG_URL != "assets/Ping.jpg":
         if not re.match("(?:http|https)://", PING_IMG_URL):
             print(
             "[ERROR] - URL PING_IMG_URL Anda salah. Pastikan dimulai dengan https://"
@@ -217,7 +217,7 @@ if PING_IMG_URL:
             sys.exit()
 
 if PLAYLIST_IMG_URL:
-    if PLAYLIST_IMG_URL != "assets/Playlist.jpeg":
+    if PLAYLIST_IMG_URL != "assets/Playlist.jpg":
         if not re.match("(?:http|https)://", PLAYLIST_IMG_URL):
             print(
             "[ERROR] - URL PLAYLIST_IMG_URL Anda salah. Pastikan dimulai dengan https://"
@@ -225,7 +225,7 @@ if PLAYLIST_IMG_URL:
             sys.exit()
 
 if GLOBAL_IMG_URL:
-    if GLOBAL_IMG_URL != "assets/Global.jpeg":
+    if GLOBAL_IMG_URL != "assets/Global.jpg":
         if not re.match("(?:http|https)://", GLOBAL_IMG_URL):
             print(
             "[ERROR] - URL GLOBAL_IMG_URL Anda salah. Pastikan dimulai dengan https://"
@@ -234,7 +234,7 @@ if GLOBAL_IMG_URL:
 
 
 if STATS_IMG_URL:
-    if STATS_IMG_URL != "assets/Stats.jpeg":
+    if STATS_IMG_URL != "assets/Stats.jpg":
         if not re.match("(?:http|https)://", STATS_IMG_URL):
             print(
             "[ERROR] - URL STATS_IMG_URL Anda salah. Pastikan dimulai dengan https://"
@@ -243,7 +243,7 @@ if STATS_IMG_URL:
 
 
 if TELEGRAM_AUDIO_URL:
-    if TELEGRAM_AUDIO_URL != "assets/Audio.jpeg":
+    if TELEGRAM_AUDIO_URL != "assets/Audio.jpg":
         if not re.match("(?:http|https)://", TELEGRAM_AUDIO_URL):
             print(
             "[ERROR] - URL TELEGRAM_AUDIO_URL Anda salah. Pastikan dimulai dengan https://"
@@ -252,7 +252,7 @@ if TELEGRAM_AUDIO_URL:
 
 
 if STREAM_IMG_URL:
-    if STREAM_IMG_URL != "assets/Stream.jpeg":
+    if STREAM_IMG_URL != "assets/Stream.jpg":
         if not re.match("(?:http|https)://", STREAM_IMG_URL):
             print(
             "[ERROR] - URL STREAM_IMG_URL Anda salah. Pastikan dimulai dengan https://"
@@ -261,7 +261,7 @@ if STREAM_IMG_URL:
 
 
 if SOUNCLOUD_IMG_URL:
-    if SOUNCLOUD_IMG_URL != "assets/Soundcloud.jpeg":
+    if SOUNCLOUD_IMG_URL != "assets/Soundcloud.jpg":
         if not re.match("(?:http|https)://", SOUNCLOUD_IMG_URL):
             print(
             "[ERROR] - URL SOUNCLOUD_IMG_URL Anda salah. Pastikan dimulai dengan https://"
@@ -269,7 +269,7 @@ if SOUNCLOUD_IMG_URL:
             sys.exit()
 
 if YOUTUBE_IMG_URL:
-    if YOUTUBE_IMG_URL != "assets/Youtube.jpeg":
+    if YOUTUBE_IMG_URL != "assets/Youtube.jpg":
         if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
             print(
             "[ERROR] - URL YOUTUBE_IMG_URL Anda salah. Pastikan dimulai dengan https://"
@@ -278,7 +278,7 @@ if YOUTUBE_IMG_URL:
 
 
 if TELEGRAM_VIDEO_URL:
-    if TELEGRAM_VIDEO_URL != "assets/Video.jpeg":
+    if TELEGRAM_VIDEO_URL != "assets/Video.jpg":
         if not re.match("(?:http|https)://", TELEGRAM_VIDEO_URL):
             print(
             "[ERROR] - URL TELEGRAM_VIDEO_URL Anda salah. Pastikan dimulai dengan https://"
