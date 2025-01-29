@@ -40,11 +40,7 @@ async def helper_private(
         except:
             pass
         chat_id = update.message.chat.id
-        try:
-            language = await get_lang(chat_id)
-        except Exception as e:
-            print(f"Error getting language: {e}")
-            language = "id"  # default to English if there's an error
+        language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_, True)
         if update.message.photo:

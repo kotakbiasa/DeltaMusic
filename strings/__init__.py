@@ -23,7 +23,10 @@ def get_command(value: str) -> List:
 
 
 def get_string(lang: str):
-    return languages[lang]
+    try:
+        return languages[lang]
+    except KeyError:
+        return languages["id"]
 
 
 for filename in os.listdir(r"./strings"):

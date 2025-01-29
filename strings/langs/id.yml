@@ -257,12 +257,12 @@ L_B_1 : "🌋 Periksa Lirik Sekarang"
 # Start
 S_B_1 : "👨‍💻 Perintah"
 S_B_2 : "⚙️ Pengaturan"
-S_B_3 : "💬 Dukungan"
+S_B_3 : "Dukungan 💬"
 S_B_4 : "📢 Pembaruan"
-S_B_5 : "➕ Tambahkan Saya ke Grup Anda"
-S_B_6 : "🎬 YouTube "
+S_B_5 : "➕ Tambahkan Saya ke Grup Anda ➕"
+S_B_6 : "YouTube 🎬"
 S_B_7 : "👤 Pemilik"
-S_B_8 : "🔧 Bantuan dan Perintah"
+S_B_8 : "🔧 Bantuan dan Perintah 🔧"
 
 #Help 
 H_B_1 : "👤 Admin"
