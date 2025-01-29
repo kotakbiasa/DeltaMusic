@@ -82,15 +82,12 @@ async def tv_channel_callback(client, callback_query):
             err = e if ex_type == "AssistantErr" else _["general_4"].format(ex_type)
             return await mystic.edit_text(err)
         await play_logs(callback_query.message, streamtype="M3u8 or Index Link")
-        try:
-            await callback_query.answer()
-        except pyrogram.errors.exceptions.bad_request_400.QueryIdInvalid:
-            pass
+        await callback_query.answer()
     else:
         await callback_query.answer("Siaran tidak ditemukan!", show_alert=True)
 
 @app.on_message(
-    filters.command(["vplay", "tvplayforce", "tv", "ctv"])
+    filters.command(["tvplayforce", "tv", "ctv"])
     & filters.group
     & ~BANNED_USERS
 )
