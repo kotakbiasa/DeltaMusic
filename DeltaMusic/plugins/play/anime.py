@@ -1,7 +1,7 @@
 import requests
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from DeltaMusic.resources import get_pyrogram_api_id, get_pyrogram_api_hash, get_pyrogram_bot_token
+from DeltaMusic.config import API_ID, API_HASH, BOT_TOKEN
 
 def get_anime_streaming_url(title, episode):
     # Define the API endpoint for searching the anime
@@ -119,9 +119,9 @@ def button(client, callback_query):
         callback_query.message.reply_text("Unknown command")
 
 def main():
-    api_id = get_pyrogram_api_id()
-    api_hash = get_pyrogram_api_hash()
-    bot_token = get_pyrogram_bot_token()
+    api_id = API_ID
+    api_hash = API_HASH
+    bot_token = BOT_TOKEN
     
     app = Client("anime_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
     
