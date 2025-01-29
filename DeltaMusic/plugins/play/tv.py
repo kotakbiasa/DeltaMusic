@@ -24,30 +24,28 @@ from DeltaMusic.utils.database import (
 from DeltaMusic.utils.logger import play_logs
 from DeltaMusic.utils.stream.stream import stream
 
-RADIO_STATION = {
-    "The Rockin Life": "https://n10.radiojar.com/7csmg90fuqruv?rj-ttl=5&rj-tok=AAABlLLRtm0A79_IvCfOpTBeBw",
-    "i-Radio": "https://n0d.radiojar.com/4ywdgup3bnzuv?rj-ttl=5&rj-tok=AAABlLLWuAUAXZtQLiTbz29MeA",
-    "Radio Elshinta": "https://stream-ssl.arenastreaming.com:8000/jakarta.m3u",
-    "90.4 FM": "https://stream.radiojar.com/u7d8heq3bnzuv",
-    "OZ Radio": "https://streaming.ozradiojakarta.com:8443/ozjakarta",
-    "Radio Sonora": "https://streaming.brol.tech/rtfmlounge",
-    "Hot 93.2 FM": "https://wz.mari.co.id:1936/web_hotfm/hotfm/playlist.m3u8",
-    "KISI FM": "http://live.serverstreaming.net:9340/kisifm",
-    "Smart FM": "https://streaming.brol.tech/rtfmlounge",
+TV_CHANNEL = {
+    "Trans 7": "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8",
+    "TransTV": "https://video.detik.com/transtv/smil:transtv.smil/index.m3u8",
+    "CNBC Indonesia": "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8",
+    "KompasTV": "http://op-group1-swiftservehd-1.dens.tv/h/h234/01.m3u8",
+    "One Piece": "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f7790b3ed0c88000720b241/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a7816-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=4b38ba42-6f97-4a17-b657-1277978d366c",
+    "CNN Indonesia": "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/master.m3u8",
+
 }
 
-def get_station_buttons():
+def get_channel_buttons():
     buttons = []
-    for name in sorted(RADIO_STATION.keys()):
-        buttons.append([InlineKeyboardButton(text=name, callback_data=f"radio_station_{name}")])
+    for name in sorted(TV_CHANNEL.keys()):
+        buttons.append([InlineKeyboardButton(text=name, callback_data=f"tv_channel_{name}")])
     return InlineKeyboardMarkup(buttons)
 
 
-@app.on_callback_query(filters.regex(r"^radio_station_"))
-async def radio_station_callback(client, callback_query):
-    station_name = callback_query.data.split("_", 2)[2]
-    RADIO_URL = RADIO_STATION.get(station_name)
-    if RADIO_URL:
+@app.on_callback_query(filters.regex(r"^tv_channel_"))
+async def tv_channel_callback(client, callback_query):
+    channel_name = callback_query.data.split("_", 2)[2]
+    TV_URL = TV_CHANNEL.get(channel_name)
+    if TV_URL:
         language = await get_lang(callback_query.message.chat.id)
         _ = get_string(language)
         playmode = await get_playmode(callback_query.message.chat.id)
@@ -72,7 +70,7 @@ async def radio_station_callback(client, callback_query):
                 _,
                 mystic,
                 callback_query.from_user.id,
-                RADIO_URL,
+                TV_URL,
                 chat_id,
                 callback_query.from_user.mention,
                 callback_query.message.chat.id,
@@ -86,14 +84,14 @@ async def radio_station_callback(client, callback_query):
         await play_logs(callback_query.message, streamtype="M3u8 or Index Link")
         await callback_query.answer()
     else:
-        await callback_query.answer("Stasiun tidak ditemukan!", show_alert=True)
+        await callback_query.answer("Siaran tidak ditemukan!", show_alert=True)
 
 @app.on_message(
-    filters.command(["radioplayforce", "radio", "cradio"])
+    filters.command(["tvplayforce", "tv", "ctv"])
     & filters.group
     & ~BANNED_USERS
 )
-async def radio(client, message: Message):
+async def tv(client, message: Message):
     msg = await message.reply_text("Mohon tunggu sebentar....")
     try:
         try:
@@ -172,9 +170,9 @@ async def radio(client, message: Message):
         except:
             pass
     await msg.delete()
-    station_name = " ".join(message.command[1:])
-    RADIO_URL = RADIO_STATION.get(station_name)
-    if RADIO_URL:
+    channel_name = " ".join(message.command[1:])
+    TV_URL = TV_CHANNEL.get(channel_name)
+    if TV_URL:
         language = await get_lang(message.chat.id)
         _ = get_string(language)
         playmode = await get_playmode(message.chat.id)
@@ -207,7 +205,7 @@ async def radio(client, message: Message):
                 _,
                 mystic,
                 message.from_user.id,
-                RADIO_URL,
+                TV_URL,
                 chat_id,
                 message.from_user.mention,
                 message.chat.id,
@@ -221,6 +219,6 @@ async def radio(client, message: Message):
         return await play_logs(message, streamtype="M3u8 or Index Link")
     else:
         await message.reply(
-            "Silakan pilih nama stasiun radio untuk diputar",
-            reply_markup=get_station_buttons()
+            "Silakan pilih nama siaran tv untuk diputar",
+            reply_markup=get_channel_buttons()
         )

@@ -135,7 +135,7 @@ def telegram_markup(_, chat_id):
 
 ## Oleh Anon
 close_keyboard = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="Tutup", callback_data="close")]]
+    [[InlineKeyboardButton(text="✅ Tutup", callback_data="close")]]
 )
 
 ## Pencarian Query Inline
@@ -255,12 +255,12 @@ def panel_markup_1(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="▷",
+                text="▶️",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
-            InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
             InlineKeyboardButton(
@@ -274,30 +274,30 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⇆ Acak",
+                text="🔀 Acak",
                 callback_data=f"ADMIN Shuffle|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="↻ Ulang", callback_data=f"ADMIN Loop|{chat_id}"
+                text="🔁 Ulang", callback_data=f"ADMIN Loop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⏮ 10 detik",
+                text="⏮️ 10 detik",
                 callback_data=f"ADMIN 1|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⏭ 10 detik",
+                text="⏭️ 10 detik",
                 callback_data=f"ADMIN 2|{chat_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⏮ 30 detik",
+                text="⏮️ 30 detik",
                 callback_data=f"ADMIN 3|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="⏭ 30 detik",
+                text="⏭️ 30 detik",
                 callback_data=f"ADMIN 4|{chat_id}",
             ),
         ],
@@ -326,6 +326,6 @@ def queue_markup(_, videoid, chat_id):
             InlineKeyboardButton(text="⏭️", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="⏹️", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        [InlineKeyboardButton(text="Tutup", callback_data=f"ADMIN CloseA|{chat_id}")],
+        [InlineKeyboardButton(text="✅ Tutup", callback_data=f"ADMIN CloseA|{chat_id}")],
     ]
     return buttons
