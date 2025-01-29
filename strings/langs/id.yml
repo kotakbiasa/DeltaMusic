@@ -151,7 +151,7 @@ cplay_5 : "Hanya saluran yang didukung."
 cplay_6 : "Anda perlu menjadi **pemilik** saluran [{0}] untuk menghubungkannya dengan grup ini.\n**Pemilik saluran:** @{1}\n\nSebagai alternatif, Anda dapat menghubungkan grup Anda ke saluran tersebut dan kemudian mencoba menghubungkannya dengan `/channelplay linked`"
 
 #Play
-play_1 : "**» Mencari untuk Anda 🎙️ tunggu...**"
+play_1 : "**Mencari untuk Anda 🎙️ tunggu...**"
 play_2 : "🏷**Mode Putar Saluran**\n🔄 Memproses permintaan... harap tunggu!\n\n**Saluran Terhubung:** {0}"
 play_3 : "Gagal memproses permintaan!"
 play_4 : "<b>Hanya Admin yang Dapat Memutar</b>\nHanya Admin Grup Ini yang Diizinkan Memutar\n\nUbah Mode Putar melalui /playmode"
