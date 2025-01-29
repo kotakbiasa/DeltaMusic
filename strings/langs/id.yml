@@ -246,10 +246,10 @@ server_1 : "✯ <b>Hasil Tes Kecepatan</b> ✯\n\n<u><b>Klien :</b></u>\n<b>» I
 # Inline Buttons
 
 #General Buttons
-CLOSE_BUTTON  : "Tutup"
-CLOSEMENU_BUTTON  : "Tutup"
-BACK_BUTTON : "Kembali"
-UNBAN_BUTTON : "Buka Blokir"
+CLOSE_BUTTON  : "✅ Tutup"
+CLOSEMENU_BUTTON  : "✅ Tutup"
+BACK_BUTTON : "🔙 Kembali"
+UNBAN_BUTTON : "🚫 Buka Blokir"
 
 #Lyrics
 L_B_1 : "🌋 Periksa Lirik Sekarang"
@@ -262,17 +262,17 @@ S_B_4 : "📢 Pembaruan"
 S_B_5 : "➕ Tambahkan Saya ke Grup Anda"
 S_B_6 : "🎬 YouTube "
 S_B_7 : "👤 Pemilik"
-S_B_8 : "Bantuan dan Perintah"
+S_B_8 : "🔧 Bantuan dan Perintah"
 
 #Help 
-H_B_1 : "Admin"
-H_B_2 : "Putar"
-H_B_3 : "Bot"
-H_B_4 : "Ekstra"
-H_B_5 : "Tutup"
-H_B_6 : "Sudo"
-H_B_7 : "Modul"
-H_B_8 : "Beli"
+H_B_1 : "👤 Admin"
+H_B_2 : "⏯️ Putar"
+H_B_3 : "🤖 Bot"
+H_B_4 : "📓 Ekstra"
+H_B_5 : "✅ Tutup"
+H_B_6 : "👨‍💻 Sudo"
+H_B_7 : "📔 Modul"
+H_B_8 : "🛍 Beli"
 
 #PlayMode
 PM_B_1 : "Putar Langsung"
@@ -280,10 +280,10 @@ PM_B_2 : "Markup Inline"
 PM_B_3 : "Putar Saluran"
 
 #Play
-P_B_1 : "Audio"
-P_B_2 : "Video"
-P_B_3 : "Siaran Langsung"
-P_B_4 : "Daftar Putar"
+P_B_1 : "🔊 Audio"
+P_B_2 : "🎬 Video"
+P_B_3 : "📡 Siaran Langsung"
+P_B_4 : "📝 Daftar Putar"
 
 #Playlist
 PL_B_1 : "🥲 Daftar Putar "
@@ -304,7 +304,7 @@ ST_B_2 : "🕹️ Kualitas Video"
 ST_B_3 : "🔥 Pengguna yang Diizinkan"
 ST_B_4 : "🎙️ Dasbor"
 ST_B_5 : "♣️ Mode Putar"
-ST_B_6 : "🇮🇩 Bahasa 🇦🇺"
+ST_B_6 : "🇮🇩 Bahasa"
 ST_B_7 : "🗑 Mode Bersih"
 ST_B_8 : "{0} Kualitas Rendah"
 ST_B_9 : "{0} Kualitas Sedang"
@@ -335,8 +335,8 @@ ST_B_33 : "{0} Kualitas Video QHD-2k"
 
 #Song
 SG_B_1 : "๏ Klik di Sini ๏"
-SG_B_2 : "👨‍🎤 Audio"
-SG_B_3 : "🕹️ Video"
+SG_B_2 : "🔊 Audio"
+SG_B_3 : "🎬 Video"
 
 #Stats
 SA_B_1 : "🔥 10 Obrolan Teratas"
