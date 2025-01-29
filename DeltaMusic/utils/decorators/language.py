@@ -14,12 +14,13 @@ from strings import get_string
 from DeltaMusic.misc import SUDOERS
 from DeltaMusic.utils.database import get_lang, is_commanddelete_on, is_maintenance
 from pyrogram.enums import ChatMemberStatus
+from pyrogram.types import Message
 
 
 def language(mystic):
-    async def wrapper(_, message, **kwargs):
+    async def wrapper(_, message: Message, **kwargs):
         if await is_maintenance() is False:
-            if message.from_user.id not in SUDOERS:
+            if message.from_user and message.from_user.id not in SUDOERS:
                 return await message.reply_text(
                     "» Bot sedang dalam pemeliharaan untuk sementara waktu, silakan kunjungi obrolan dukungan untuk mengetahui alasannya."
                 )
@@ -35,9 +36,10 @@ def language(mystic):
             language = get_string("id")
         
         # Check if the user is an anonymous admin
-        member = await app.get_chat_member(message.chat.id, message.from_user.id)
-        if member.status == ChatMemberStatus.ADMINISTRATOR and member.user.is_anonymous:
-            return await message.reply_text("Anda terdeteksi sebagai admin anonim, silakan gunakan akun biasa.")
+        if message.from_user:
+            member = await app.get_chat_member(message.chat.id, message.from_user.id)
+            if member.status == ChatMemberStatus.ADMINISTRATOR and member.user.is_anonymous:
+                return await message.reply_text("Anda terdeteksi sebagai admin anonim, silakan gunakan akun biasa.")
         
         return await mystic(_, message, language)
 
