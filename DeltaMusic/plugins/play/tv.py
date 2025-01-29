@@ -79,6 +79,7 @@ async def tv_station_callback(client, callback_query):
                 callback_query.message.chat.id,
                 video=video,
                 streamtype="index",
+                force_play=True  # Force play without queuing
             )
         except Exception as e:
             ex_type = type(e).__name__

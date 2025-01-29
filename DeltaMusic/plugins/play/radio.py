@@ -48,6 +48,7 @@ async def radio_station_callback(client, callback_query):
     station_name = callback_query.data.split("_", 2)[2]
     RADIO_URL = RADIO_STATION.get(station_name)
     if RADIO_URL:
+        await callback_query.answer()  # Answer the callback query first
         language = await get_lang(callback_query.message.chat.id)
         _ = get_string(language)
         playmode = await get_playmode(callback_query.message.chat.id)
@@ -78,13 +79,13 @@ async def radio_station_callback(client, callback_query):
                 callback_query.message.chat.id,
                 video=video,
                 streamtype="index",
+                force_play=True  # Force play without queuing
             )
         except Exception as e:
             ex_type = type(e).__name__
             err = e if ex_type == "AssistantErr" else _["general_4"].format(ex_type)
             return await mystic.edit_text(err)
         await play_logs(callback_query.message, streamtype="M3u8 or Index Link")
-        await callback_query.answer()
     else:
         await callback_query.answer("Stasiun tidak ditemukan!", show_alert=True)
 
