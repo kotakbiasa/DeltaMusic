@@ -50,7 +50,7 @@ def languageCB(mystic):
             language_dict = get_string(language)
         except:
             language_dict = get_string("id")
-        return await mystic(_, CallbackQuery, CallbackQuery.message, language_dict)
+        return await mystic(_, CallbackQuery, language_dict)
 
     return wrapper
 
