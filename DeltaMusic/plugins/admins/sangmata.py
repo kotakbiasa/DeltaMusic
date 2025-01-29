@@ -10,7 +10,7 @@ from DeltaMusic.core.userbot import assistants
 
 @app.on_message(filters.command("sg"))
 async def sg(client: Client, message: Message):
-    if len(message.text.split()) < 1 and not message.reply_to_message:
+    if len(message.text.split()) < 2 and not message.reply_to_message:
         return await message.reply("sg username/id/reply")
     if message.reply_to_message:
         args = message.reply_to_message.from_user.id
@@ -50,4 +50,3 @@ async def sg(client: Client, message: Message):
         pass
     
     await lol.delete()
-    
