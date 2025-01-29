@@ -24,7 +24,7 @@ from DeltaMusic.utils.database import (
 from DeltaMusic.utils.logger import play_logs
 from DeltaMusic.utils.stream.stream import stream
 
-TV_CHANNEL = {
+TV_STATION = {
     "Trans 7": "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8",
     "TransTV": "https://video.detik.com/transtv/smil:transtv.smil/index.m3u8",
     "CNBC Indonesia": "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8",
@@ -34,20 +34,19 @@ TV_CHANNEL = {
     "Indosiar": "http://op-group1-swiftservehd-1.dens.tv/h/h207/02.m3u8",
     "ANTV": "http://op-group1-swiftservehd-1.dens.tv/h/h235/02.m3u8",
     "MDTV": "http://op-group1-swiftservehd-1.dens.tv/h/h223/02.m3u8",
-
 }
 
-def get_channel_buttons():
+def get_station_buttons():
     buttons = []
-    for name in sorted(TV_CHANNEL.keys()):
-        buttons.append([InlineKeyboardButton(text=name, callback_data=f"tv_channel_{name}")])
+    for name in sorted(TV_STATION.keys()):
+        buttons.append([InlineKeyboardButton(text=name, callback_data=f"tv_station_{name}")])
     return InlineKeyboardMarkup(buttons)
 
 
-@app.on_callback_query(filters.regex(r"^tv_channel_"))
-async def tv_channel_callback(client, callback_query):
-    channel_name = callback_query.data.split("_", 2)[2]
-    TV_URL = TV_CHANNEL.get(channel_name)
+@app.on_callback_query(filters.regex(r"^tv_station_"))
+async def tv_station_callback(client, callback_query):
+    station_name = callback_query.data.split("_", 2)[2]
+    TV_URL = TV_STATION.get(station_name)
     if TV_URL:
         language = await get_lang(callback_query.message.chat.id)
         _ = get_string(language)
@@ -87,7 +86,7 @@ async def tv_channel_callback(client, callback_query):
         await play_logs(callback_query.message, streamtype="M3u8 or Index Link")
         await callback_query.answer()
     else:
-        await callback_query.answer("Siaran tidak ditemukan!", show_alert=True)
+        await callback_query.answer("Stasiun tidak ditemukan!", show_alert=True)
 
 @app.on_message(
     filters.command(["tvplayforce", "tv", "ctv"])
@@ -173,8 +172,8 @@ async def tv(client, message: Message):
         except:
             pass
     await msg.delete()
-    channel_name = " ".join(message.command[1:])
-    TV_URL = TV_CHANNEL.get(channel_name)
+    station_name = " ".join(message.command[1:])
+    TV_URL = TV_STATION.get(station_name)
     if TV_URL:
         language = await get_lang(message.chat.id)
         _ = get_string(language)
@@ -222,6 +221,6 @@ async def tv(client, message: Message):
         return await play_logs(message, streamtype="M3u8 or Index Link")
     else:
         await message.reply(
-            "Silakan pilih nama siaran tv untuk diputar",
-            reply_markup=get_channel_buttons()
+            "Silakan pilih nama stasiun tv untuk diputar",
+            reply_markup=get_station_buttons()
         )
