@@ -7,6 +7,7 @@ from pyrogram.errors import (
     InviteRequestSent,
     UserAlreadyParticipant,
     UserNotParticipant,
+    PeerIdInvalid,
 )
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -54,12 +55,12 @@ async def tv_station_callback(client, callback_query):
         playmode = await get_playmode(callback_query.message.chat.id)
         playty = await get_playtype(callback_query.message.chat.id)
         if playty != "Everyone":
-            if callback_query.from_user and callback_query.from_user.id not in SUDOERS:
+            if not callback_query.from_user or callback_query.from_user.id not in SUDOERS:
                 admins = adminlist.get(callback_query.message.chat.id)
                 if not admins:
                     return await callback_query.answer(_["admin_25"], show_alert=True)
                 else:
-                    if callback_query.from_user.id not in admins:
+                    if not callback_query.from_user or callback_query.from_user.id not in admins:
                         return await callback_query.answer(_["play_4"], show_alert=True)
         chat_id = callback_query.message.chat.id
         channel = None
@@ -72,10 +73,10 @@ async def tv_station_callback(client, callback_query):
             await stream(
                 _,
                 mystic,
-                callback_query.from_user.id,
+                callback_query.from_user.id if callback_query.from_user else None,
                 TV_URL,
                 chat_id,
-                callback_query.from_user.mention,
+                callback_query.from_user.mention if callback_query.from_user else "Anonymous",
                 callback_query.message.chat.id,
                 video=video,
                 streamtype="index"
@@ -112,6 +113,11 @@ async def tv(client, message: Message):
             invitelink = message.chat.username
             try:
                 await userbot.resolve_peer(invitelink)
+            except PeerIdInvalid:
+                logging.exception("Anonymous admin detected.")
+                return await msg.edit_text(
+                    "Tidak dapat mengundang asisten karena admin anonim terdeteksi. Silakan nonaktifkan mode anonim dan coba lagi."
+                )
             except Exception as ex:
                 logging.exception(ex)
         else:
