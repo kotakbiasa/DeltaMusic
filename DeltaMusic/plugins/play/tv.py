@@ -289,6 +289,96 @@ async def radio(client, message: Message):
             reply_markup=get_station_buttons()
         )
 
+@app.on_callback_query(filters.regex(r"^radio_station_"))
+async def radio_station_callback(client, callback_query):
+    station_name = callback_query.data.split("_", 2)[2]
+    RADIO_URL = RADIO_STATION.get(station_name)
+    if RADIO_URL:
+        await callback_query.answer()  # Answer the callback query first
+        language = await get_lang(callback_query.message.chat.id)
+        _ = get_string(language)
+        playmode = await get_playmode(callback_query.message.chat.id)
+        playty = await get_playtype(callback_query.message.chat.id)
+        if playty != "Everyone":
+            if callback_query.from_user and callback_query.from_user.id not in SUDOERS:
+                admins = adminlist.get(callback_query.message.chat.id)
+                if not admins:
+                    return await callback_query.answer(_["admin_25"], show_alert=True)
+                else:
+                    if callback_query.from_user.id not in admins:
+                        return await callback_query.answer(_["play_4"], show_alert=True)
+        chat_id = callback_query.message.chat.id
+        channel = None
+
+        video = None
+        mystic = await callback_query.message.reply_text(
+            _["play_2"].format(channel) if channel else _["play_1"]
+        )
+        try:
+            await stream(
+                _,
+                mystic,
+                callback_query.from_user.id,
+                RADIO_URL,
+                chat_id,
+                callback_query.from_user.mention,
+                callback_query.message.chat.id,
+                video=video,
+                streamtype="index"
+            )
+        except Exception as e:
+            ex_type = type(e).__name__
+            err = e if ex_type == "AssistantErr" else _["general_4"].format(ex_type)
+            return await mystic.edit_text(err)
+        await play_logs(callback_query.message, streamtype="M3u8 or Index Link")
+    else:
+        await callback_query.answer("Stasiun tidak ditemukan!", show_alert=True)
+
+@app.on_callback_query(filters.regex(r"^tv_station_"))
+async def tv_station_callback(client, callback_query):
+    station_name = callback_query.data.split("_", 2)[2]
+    TV_URL = TV_STATION.get(station_name)
+    if TV_URL:
+        await callback_query.answer()  # Answer the callback query first
+        language = await get_lang(callback_query.message.chat.id)
+        _ = get_string(language)
+        playmode = await get_playmode(callback_query.message.chat.id)
+        playty = await get_playtype(callback_query.message.chat.id)
+        if playty != "Everyone":
+            if not callback_query.from_user or callback_query.from_user.id not in SUDOERS:
+                admins = adminlist.get(callback_query.message.chat.id)
+                if not admins:
+                    return await callback_query.answer(_["admin_25"], show_alert=True)
+                else:
+                    if not callback_query.from_user or callback_query.from_user.id not in admins:
+                        return await callback_query.answer(_["play_4"], show_alert=True)
+        chat_id = callback_query.message.chat.id
+        channel = None
+
+        video = True
+        mystic = await callback_query.message.reply_text(
+            _["play_2"].format(channel) if channel else _["play_1"]
+        )
+        try:
+            await stream(
+                _,
+                mystic,
+                callback_query.from_user.id if callback_query.from_user else None,
+                TV_URL,
+                chat_id,
+                callback_query.from_user.mention if callback_query.from_user else "Anonymous",
+                callback_query.message.chat.id,
+                video=video,
+                streamtype="index"
+            )
+        except Exception as e:
+            ex_type = type(e).__name__
+            err = e if ex_type == "AssistantErr" else _["general_4"].format(ex_type)
+            return await mystic.edit_text(err)
+        await play_logs(callback_query.message, streamtype="M3u8 or Index Link")
+    else:
+        await callback_query.answer("Stasiun tidak ditemukan!", show_alert=True)
+
 @app.on_message(
     filters.command(["tvplayforce", "tv", "ctv"])
     & filters.group
@@ -310,7 +400,11 @@ async def tv(client, message: Message):
             )
     except UserNotParticipant:
         if message.chat.username:
-            invitelink = f"https://t.me/{message.chat.username}"
+            invitelink = message.chat.username
+            try:
+                await userbot.resolve_peer(invitelink)
+            except Exception as ex:
+                logging.exception(ex)
         else:
             try:
                 invitelink = await client.export_chat_invite_link(message.chat.id)
@@ -323,7 +417,7 @@ async def tv(client, message: Message):
                     await app.approve_chat_join_request(message.chat.id, userbot.id)
                 except Exception as e:
                     return await msg.edit(
-                        f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{e}`"
+                        f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{ex}`"
                     )
             except Exception as ex:
                 if "channels.JoinChannel" in str(ex) or "Username tidak ditemukan" in str(ex):
@@ -352,7 +446,7 @@ async def tv(client, message: Message):
                 await app.approve_chat_join_request(message.chat.id, userbot.id)
             except Exception as e:
                 return await msg.edit(
-                    f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{e}`"
+                    f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{ex}`"
                 )
         except Exception as ex:
             if "channels.JoinChannel" in str(ex) or "Username tidak ditemukan" in str(ex):
@@ -375,14 +469,14 @@ async def tv(client, message: Message):
         language = await get_lang(message.chat.id)
         _ = get_string(language)
         playmode = await get_playmode(message.chat.id)
-        playty = await get_playtype(message.chat.id) 
+        playty = await get_playtype(message.chat.id)
         if playty != "Everyone":
-            if not message.from_user or message.from_user.id not in SUDOERS:
+            if message.from_user and message.from_user.id not in SUDOERS:
                 admins = adminlist.get(message.chat.id)
                 if not admins:
                     return await message.reply_text(_["admin_25"])
                 else:
-                    if not message.from_user or message.from_user.id not in admins:
+                    if message.from_user.id not in admins:
                         return await message.reply_text(_["play_4"])
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
@@ -403,10 +497,10 @@ async def tv(client, message: Message):
             await stream(
                 _,
                 mystic,
-                message.from_user.id if message.from_user else None,
+                message.from_user.id,
                 TV_URL,
                 chat_id,
-                message.from_user.mention if message.from_user else "Anonymous",
+                message.from_user.mention,
                 message.chat.id,
                 video=video,
                 streamtype="index"
@@ -418,6 +512,6 @@ async def tv(client, message: Message):
         return await play_logs(message, streamtype="M3u8 or Index Link")
     else:
         await message.reply(
-            "Silakan pilih nama stasiun tv untuk diputar",
+            "Silakan pilih nama stasiun TV untuk diputar",
             reply_markup=get_tv_station_buttons()
         )
