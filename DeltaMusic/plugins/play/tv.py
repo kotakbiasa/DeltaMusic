@@ -276,8 +276,7 @@ async def radio(client, message: Message):
                 message.from_user.mention,
                 message.chat.id,
                 video=video,
-                streamtype="index",
-                forceplay=ffplay  # Force play the selected radio station
+                streamtype="index"
             )
         except Exception as e:
             ex_type = type(e).__name__
@@ -376,7 +375,7 @@ async def tv(client, message: Message):
         language = await get_lang(message.chat.id)
         _ = get_string(language)
         playmode = await get_playmode(message.chat.id)
-        playty = await get_playtype(message.chat.id)
+        playty = await get_playtype(message.chat.id) 
         if playty != "Everyone":
             if not message.from_user or message.from_user.id not in SUDOERS:
                 admins = adminlist.get(message.chat.id)
@@ -404,10 +403,10 @@ async def tv(client, message: Message):
             await stream(
                 _,
                 mystic,
-                message.from_user.id if message.from_user else None,
+                message.from_user.id,
                 TV_URL,
                 chat_id,
-                message.from_user.mention if message.from_user else "Anonymous",
+                message.from_user.mention,
                 message.chat.id,
                 video=video,
                 streamtype="index"
