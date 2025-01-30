@@ -213,6 +213,7 @@ async def radio(client, message: Message):
                 message.chat.id,
                 video=video,
                 streamtype="index",
+                forceplay=ffplay  # Force play the selected radio station
             )
         except Exception as e:
             ex_type = type(e).__name__
