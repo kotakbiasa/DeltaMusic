@@ -311,16 +311,7 @@ async def tv(client, message: Message):
             )
     except UserNotParticipant:
         if message.chat.username:
-            invitelink = message.chat.username
-            try:
-                await userbot.resolve_peer(invitelink)
-            except PeerIdInvalid:
-                logging.exception("Anonymous admin detected.")
-                return await msg.edit_text(
-                    "Tidak dapat mengundang asisten karena admin anonim terdeteksi. Silakan nonaktifkan mode anonim dan coba lagi."
-                )
-            except Exception as ex:
-                logging.exception(ex)
+            invitelink = f"https://t.me/{message.chat.username}"
         else:
             try:
                 invitelink = await client.export_chat_invite_link(message.chat.id)
@@ -333,7 +324,7 @@ async def tv(client, message: Message):
                     await app.approve_chat_join_request(message.chat.id, userbot.id)
                 except Exception as e:
                     return await msg.edit(
-                        f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{ex}`"
+                        f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{e}`"
                     )
             except Exception as ex:
                 if "channels.JoinChannel" in str(ex) or "Username tidak ditemukan" in str(ex):
@@ -362,7 +353,7 @@ async def tv(client, message: Message):
                 await app.approve_chat_join_request(message.chat.id, userbot.id)
             except Exception as e:
                 return await msg.edit(
-                    f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{ex}`"
+                    f"Gagal mengundang {userbot.mention} asisten ke {message.chat.title}.\n\n**Alasan :** `{e}`"
                 )
         except Exception as ex:
             if "channels.JoinChannel" in str(ex) or "Username tidak ditemukan" in str(ex):
