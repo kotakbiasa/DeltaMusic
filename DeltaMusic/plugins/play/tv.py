@@ -52,14 +52,14 @@ TV_STATION = {
 def get_station_buttons():
     buttons = []
     for name in sorted(RADIO_STATION.keys()):
-        buttons.append([InlineKeyboardButton(text=name, callback_data=f"radio_station_{name}")])
-    return InlineKeyboardMarkup(buttons)
+        buttons.append(InlineKeyboardButton(text=name, callback_data=f"radio_station_{name}"))
+    return InlineKeyboardMarkup([buttons[i:i + 2] for i in range(0, len(buttons), 2)])
 
 def get_tv_station_buttons():
     buttons = []
     for name in sorted(TV_STATION.keys()):
-        buttons.append([InlineKeyboardButton(text=name, callback_data=f"tv_station_{name}")])
-    return InlineKeyboardMarkup(buttons)
+        buttons.append(InlineKeyboardButton(text=name, callback_data=f"tv_station_{name}"))
+    return InlineKeyboardMarkup([buttons[i:i + 2] for i in range(0, len(buttons), 2)])
 
 
 @app.on_callback_query(filters.regex(r"^radio_station_"))
@@ -403,10 +403,10 @@ async def tv(client, message: Message):
             await stream(
                 _,
                 mystic,
-                message.from_user.id,
+                message.from_user.id if message.from_user else None,
                 TV_URL,
                 chat_id,
-                message.from_user.mention,
+                message.from_user.mention if message.from_user else "Anonymous",
                 message.chat.id,
                 video=video,
                 streamtype="index"
