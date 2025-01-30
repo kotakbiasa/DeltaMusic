@@ -387,12 +387,12 @@ async def tv(client, message: Message):
         playmode = await get_playmode(message.chat.id)
         playty = await get_playtype(message.chat.id)
         if playty != "Everyone":
-            if message.from_user and message.from_user.id not in SUDOERS:
+            if not message.from_user or message.from_user.id not in SUDOERS:
                 admins = adminlist.get(message.chat.id)
                 if not admins:
                     return await message.reply_text(_["admin_25"])
                 else:
-                    if message.from_user.id not in admins:
+                    if not message.from_user or message.from_user.id not in admins:
                         return await message.reply_text(_["play_4"])
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
@@ -413,10 +413,10 @@ async def tv(client, message: Message):
             await stream(
                 _,
                 mystic,
-                message.from_user.id,
+                message.from_user.id if message.from_user else None,
                 TV_URL,
                 chat_id,
-                message.from_user.mention,
+                message.from_user.mention if message.from_user else "Anonymous",
                 message.chat.id,
                 video=video,
                 streamtype="index"
