@@ -1,179 +1,177 @@
-<h1 align="center"><b>❤️ 𝘼𝙡𝙚𝙭𝙖 𝙈𝙪𝙨𝙞𝙘 ❤️</b></h1>
+<h1 align="center"><b>Delta Stream</b></h1>
 
 <h4 align="center">
-    Introducing Alexa Music – your smart, powerful, and simple bot for seamless audio and video playback on Telegram. Written in Python with the latest Pyrogram, Alexa Music delivers a superior entertainment experience. Upgrade now for optimal performance and a new level of Telegram enjoyment.<br> Working With Pyrogram Latest Version...
+    Memperkenalkan Delta Stream – bot pintar, kuat, dan sederhana untuk pemutaran audio dan video tanpa hambatan di Telegram. Ditulis dalam Python dengan Pyrogram terbaru, Delta Stream memberikan pengalaman hiburan yang superior. Tingkatkan sekarang untuk kinerja optimal dan tingkat kenikmatan Telegram yang baru.<br> Bekerja Dengan Versi Terbaru Pyrogram...
 </h4>
 <p align="center">
     <a href="https://t.me/Alexa_BotUpdates">
-        <img src="cover.png">
+        <img src="cover.jpeg">
     </a>
 </p>
 <p align="center">
-    <a href="https://github.com/TheTeamAlexa/AlexaMusic"> <img src="https://img.shields.io/github/repo-size/TheTeamAlexa/AlexaMusic?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/TheTeamAlexa/AlexaMusic/commits"> <img src="https://img.shields.io/github/last-commit/TheTeamAlexa/AlexaMusic?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/TheTeamAlexa/AlexaMusic/issues"> <img src="https://img.shields.io/github/issues/TheTeamAlexa/AlexaMusic?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/TheTeamAlexa/AlexaMusic/network/members"> <img src="https://img.shields.io/github/forks/TheTeamAlexa/AlexaMusic?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
+    <a href="https://github.com/kotakbiasa/DeltaMusic"> <img src="https://img.shields.io/github/repo-size/kotakbiasa/DeltaMusic?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/kotakbiasa/DeltaMusic/commits"> <img src="https://img.shields.io/github/last-commit/kotakbiasa/DeltaMusic?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/kotakbiasa/DeltaMusic/issues"> <img src="https://img.shields.io/github/issues/kotakbiasa/DeltaMusic?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/kotakbiasa/DeltaMusic/network/members"> <img src="https://img.shields.io/github/forks/kotakbiasa/DeltaMusic?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
     <a href="https://pypi.org/project/Pyrogram"> <img src="https://img.shields.io/pypi/v/Pyrogram?color=yellow&label=Pyrogram&logo=python&logoColor=green&style=for-the-badge" /></a>
 </p>
 
 
-<h2 align="center"><b>Fix for YouTube Blocking IPs and Sign in Error</b></h2>
+<h2 align="center"><b>Perbaikan untuk Pemblokiran IP YouTube dan Kesalahan Masuk</b></h2>
 
-Due to YouTube blocking ips, we found a fix. Given below:
+Karena YouTube memblokir IP, kami menemukan solusi. Berikut ini:
 
-• **Join Support Group**: Type `#cookies` in our [sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ](https://t.me/Alexa_Help) to get the necessary extension link.
+• **Jalankan Ekstensi**: Unduh [Firefox](https://www.mozilla.org) dan masuk ke akun YouTube Anda<b>(Disarankan menggunakan akun palsu)</b> lalu jalankan ekstensi yang diunduh di Firefox atau perangkat lunak lainnya untuk menghasilkan cookies.
 
-• **Run the Extension**: Download [Firefox](https://www.mozilla.org) and login your youtube account<b>(Fake Account Recommended)</b> then run the downloaded extension on your Firefox or any other Software to generate cookies.
+• **Tambahkan Cookies**: Tempelkan cookies yang dihasilkan di [BatBin](https://batbin.me). Kemudian Anda akan mendapatkan tautan, salin tautan tersebut dan tempelkan tautan Batbin di konfigurasi.
 
-• **Add Cookies**: Paste the generated cookies in [BatBin](https://batbin.me). Then you'll get a link, copy that link and paste the Batbin link in config.
-
-• **Deploy the Bot ✨** 
+• **Deploy Bot** 
 
 
-<h1 align="center"><b>😂 ᴠɪᴇᴡ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs 😂</b></h1>
+<h1 align="center"><b>Lihat Semua Perintah</b></h1>
 <br>
 
-- Thumbnail Support | Audio And Video
-- Gban User | Showing track names when skipping
-- Youtube, Local playback support | Settings panel
-- Control with buttons | Userbot auto join
-- Channel Music Play | Keyboard selection support for youtube play
-- Lyrics Scrapper | Unlimited Queue
-- Broadcast Bot | Statistic Collector
-- Block / Unblock (restrict user for using your bot)
+- Dukungan Thumbnail | Audio dan Video
+- Gban Pengguna | Menampilkan nama trek saat melewati
+- Dukungan pemutaran YouTube, Lokal | Panel pengaturan
+- Kontrol dengan tombol | Userbot auto join
+- Pemutaran Musik Saluran | Dukungan pemilihan keyboard untuk pemutaran YouTube
+- Scrapper Lirik | Antrian Tidak Terbatas
+- Bot Siaran | Pengumpul Statistik
+- Blokir / Buka Blokir (membatasi pengguna untuk menggunakan bot Anda)
 
-### ᴠɪᴇᴡ ᴀʟʟ ʙᴀsɪᴄ ᴄᴏᴍᴍᴀɴᴅs 😂
+### Lihat Semua Perintah Dasar
 <details>
-<summary><b>ʙᴀsɪᴄ ᴄᴍᴅs</b></summary>
+<summary><b>Perintah Dasar</b></summary>
 <br>
 
-- `/play <song name>` - play song you requested
-- `/playlist` - Show now playing list
-- `/song <song name>` - download songs you want quickly
-- `/search <query>` - search videos on youtube with details
-- `/vsong <song name>` - download videos you want quickly
-- `/lyric <song name>` - lyrics scrapper
-- `/vk <song name>` - generate song without download
+- `/play <nama lagu>` - memutar lagu yang Anda minta
+- `/playlist` - Menampilkan daftar putar saat ini
+- `/song <nama lagu>` - unduh lagu yang Anda inginkan dengan cepat
+- `/search <kueri>` - cari video di YouTube dengan detail
+- `/vsong <nama lagu>` - unduh video yang Anda inginkan dengan cepat
+- `/lyric <nama lagu>` - scrapper lirik
+- `/vk <nama lagu>` - menghasilkan lagu tanpa mengunduh
 </details>
 
-###  ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴇxɪᴄᴜᴛᴇ 🙄
+### Hanya Admin yang Dapat Menjalankan
 <details>
-<summary><b>ᴀᴅᴍɪɴ ᴄᴍᴅs</b></summary>
+<summary><b>Perintah Admin</b></summary>
 <br>
 
-- `/player` - open music player settings panel
-- `/pause` - pause song play
-- `/resume` - resume song play
-- `/skip` - play next song
-- `/end` - stop music play
-- `/ping` - check the bot ping status
-- `/auth` - authorized people to access the admin commands
-- `/deauth` - deauthorized people to access the admin commands
+- `/player` - buka panel pengaturan pemutar musik
+- `/pause` - jeda pemutaran lagu
+- `/resume` - lanjutkan pemutaran lagu
+- `/skip` - putar lagu berikutnya
+- `/end` - hentikan pemutaran musik
+- `/ping` - periksa status ping bot
+- `/auth` - otorisasi orang untuk mengakses perintah admin
+- `/deauth` - mencabut otorisasi orang untuk mengakses perintah admin
 </details>
 
-### sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs 🤭
+### Perintah Sudo
     
 <details>
-<summary><b>sᴜᴅᴏ ᴄᴍᴅs ᴏɴʟʏ</b></summary>
+<summary><b>Perintah Sudo</b></summary>
 <br>
 
-- `/broadcast` - order the assistant to leave all groups
-- `/gban` - gban user
+- `/broadcast` - perintahkan asisten untuk meninggalkan semua grup
+- `/gban` - gban pengguna
 </details>
     
-### ᴏɴʟʏ ᴏᴡɴᴇʀ
+### Hanya Pemilik
     
 <details>
-<summary><b>ᴏɴʟʏ ᴏᴡɴᴇʀ</b></summary>
+<summary><b>Hanya Pemilik</b></summary>
 <br>
 
-- `/broadcast` - send a broadcast message from the bot
-- `/block` - block people for using your bot
-- `/unblock` - unblock people you blocked for using your bot
-- `/blocklist` - show the list of all people who's blocked for using your bot
+- `/broadcast` - kirim pesan siaran dari bot
+- `/block` - blokir orang untuk menggunakan bot Anda
+- `/unblock` - buka blokir orang yang Anda blokir untuk menggunakan bot Anda
+- `/blocklist` - tampilkan daftar semua orang yang diblokir untuk menggunakan bot Anda
 </details>
 
 
 </details>
-<h1 align="center"><b>❤️ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ ❤️</b></h1>
-Welcome to the AlexaMusic repository, a platform developed by TheTeamAlexa to enhance your music experience through Alexa. With AlexaMusic, you can easily command your Alexa to play your favorite songs, artists, and playlists without lifting a finger.
+<h1 align="center"><b>Deployment</b></h1>
+Selamat datang di repositori Delta Stream, sebuah platform yang dikembangkan oleh TheTeamAlexa untuk meningkatkan pengalaman musik Anda melalui Delta. Dengan Delta Stream, Anda dapat dengan mudah memerintahkan Delta untuk memutar lagu, artis, dan daftar putar favorit Anda tanpa mengangkat jari.
 
-Our development team has worked tirelessly to create a seamless user experience, from integrating various music services to providing custom voice commands for Alexa. We believe that music has the power to bring people together, and our goal is to make it as accessible and enjoyable as possible.
+Tim pengembangan kami telah bekerja tanpa lelah untuk menciptakan pengalaman pengguna yang mulus, mulai dari mengintegrasikan berbagai layanan musik hingga menyediakan perintah suara khusus untuk Delta. Kami percaya bahwa musik memiliki kekuatan untuk menyatukan orang, dan tujuan kami adalah membuatnya semudah dan menyenangkan mungkin.
 
-Through this repository, we hope to share our passion for music and innovation with the world. Whether you're a developer looking to contribute to our open-source project or a music lover excited to try out AlexaMusic, we welcome you to join our community and help us shape the future of music with Alexa.
-<summary><b>ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs</b></summary>
+Melalui repositori ini, kami berharap dapat berbagi hasrat kami untuk musik dan inovasi dengan dunia. Apakah Anda seorang pengembang yang ingin berkontribusi pada proyek open-source kami atau pecinta musik yang bersemangat untuk mencoba Delta Stream, kami menyambut Anda untuk bergabung dengan komunitas kami dan membantu kami membentuk masa depan musik dengan Delta.
+<summary><b>Persyaratan</b></summary>
 <br>
     
-- [ᴘʏᴛʜᴏɴ 𝟹](https://www.python.org/)
-- [ᴛᴇʟᴇɢʀᴀᴍ ᴀᴘɪ ᴋᴇʏ](https://docs.pyrogram.org/intro/setup#api-keys)
-- [ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ᴛᴏᴋᴇɴ](https://t.me/botfather)
-- [ᴍᴏɴɢᴏᴅʙ URI](https://telegra.ph/How-To-get-Mongodb-URI-04-06)
-- [sᴛʀɪɴɢ sᴇssɪᴏɴ](https://t.me/)
+- [Python 3](https://www.python.org/)
+- [Kunci API Telegram](https://docs.pyrogram.org/intro/setup#api-keys)
+- [Token Bot Telegram](https://t.me/botfather)
+- [URI MongoDB](https://telegra.ph/How-To-get-Mongodb-URI-04-06)
+- [Sesi String](https://t.me/)
 
-<summary><b>sᴛʀɪɴɢ sᴇssɪᴏɴ</b></summary>
+<summary><b>Sesi String</b></summary>
 <br>
     
-> ʏᴏᴜ'ʟʟ ɴᴇᴇᴅ ᴀ ᴀᴘɪ_ɪᴅ & ᴀᴘɪ_ʜᴀsʜ ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴘʏʀᴏɢʀᴀᴍ sᴇssɪᴏɴ. 
-> ᴀʟᴡᴀʏs ʀᴇᴍᴇʙᴇʀ ᴛᴏ ᴜsᴇ ɢᴏᴏᴅ ᴀᴘɪ ᴄᴏᴍʙᴏ ᴇʟsᴇ ʏᴏᴜʀ ᴀᴄᴄᴏᴜɴᴛ ᴄᴏᴜʟᴅ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ.
+> Anda akan membutuhkan API_ID & API_HASH untuk menghasilkan sesi Pyrogram. 
+> Selalu ingat untuk menggunakan kombinasi API yang baik, jika tidak akun Anda bisa dihapus.
 
-<h4> ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ ᴠɪᴀ ʀᴇᴘʟ: </h4>    
+<h4> Hasilkan Sesi melalui Repl: </h4>    
 <p><a href="https://replit.com/@AssadAli/String-Session-Generator"><img src="https://img.shields.io/badge/Generate%20On%20Repl-blueviolet?style=for-the-badge&logo=appveyor" width="200"/></a></p>
 
-<h4> ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ ᴠɪᴀ ᴛᴇʟᴇɢʀᴀᴍ sᴛʀɪɴɢ-ɢᴇɴ ʙᴏᴛ: </h4>    
+<h4> Hasilkan Sesi melalui Bot String-Gen Telegram: </h4>    
 <p><a href="https://t.me/"><img src="https://img.shields.io/badge/TG%20String%20Gen%20Bot-blueviolet?style=for-the-badge&logo=appveyor" width="200"/></a></p>
 <br>
 
-<h4><b>💻 Lᴏᴄᴀʟ Hᴏsᴛɪɴɢ ᴏʀ VPS Dᴇᴘʟᴏʏᴍᴇɴᴛ Gᴜɪᴅᴇ. 🗄️</b></h4> 
+<h4><b>Panduan Hosting Lokal atau VPS</b></h4> 
 <br>
 <details>
-<summary><b>ᴄʟɪᴄᴋ ʜᴇʀᴇ</b> (ᴜʙᴜɴᴛᴜ 𝟸𝟶,𝟸𝟸)</summary>
+<summary><b>Klik di sini</b> (Ubuntu 20,22)</summary>
 <br>
 
-1.  Upgrade and Update:
+1.  Upgrade dan Update:
 ```console
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 
-2. Installing Required Packages:
+2. Menginstal Paket yang Diperlukan:
 ```console
 sudo apt-get install python3-pip ffmpeg -y
 ```
 
-3. Setting up PIP
+3. Menyiapkan PIP
 ```console
 sudo pip3 install -U pip
 ```
 
-4. Clone the Repository
+4. Clone Repositori
 ```console
-git clone https://github.com/TheTeamAlexa/AlexaMusic && cd AlexaMusic
+git clone https://github.com/kotakbiasa/DeltaMusic && cd DeltaMusic
 ```
 
-5. Install Requirements
+5. Instal Persyaratan
 ```console
 pip3 install -U -r requirements.txt
 ```
 
-6. Create .env  with sample.env
+6. Buat .env dengan sample.env
 ```console
 cp sample.env .env
 ```
-> Edit .env with your vars. 
+> Edit .env dengan variabel Anda. 
 
-7. Editing Vars:
+7. Mengedit Variabel:
 ```console
 vi .env
 ```
-> Edit .env with your values or you can simple copy a config from here and paste it to your notepad, then edit and paste there.
-> Press I button on keyboard to start editing.
-> Press Ctrl + C  once you are done with editing vars and type :wq to save .env or :qa to exit editing.
+> Edit .env dengan nilai Anda atau Anda dapat menyalin konfigurasi dari sini dan menempelkannya ke notepad Anda, lalu edit dan tempel di sana.
+> Tekan tombol I pada keyboard untuk mulai mengedit.
+> Tekan Ctrl + C setelah selesai mengedit variabel dan ketik :wq untuk menyimpan .env atau :qa untuk keluar dari pengeditan.
 
-8. Install Tmux : 
+8. Instal Tmux : 
 ```console
 sudo apt install tmux && tmux
 ```
 
-9. Finally Run Alexa Music Bot
+9. Akhirnya Jalankan Delta Stream Bot
 ```console
 bash start
 ```
@@ -181,109 +179,109 @@ bash start
 
 <br>
 <details>
-<summary><b>ᴄʟɪᴄᴋ ʜᴇʀᴇ</b> (ᴜʙᴜɴᴛᴜ 𝟸4)</summary>
+<summary><b>Klik di sini</b> (Ubuntu 24)</summary>
 <br>
 
-1.  Upgrade and Update:
+1.  Upgrade dan Update:
 ```console
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 
-2. Installing Required Packages:
+2. Menginstal Paket yang Diperlukan:
 ```console
 sudo apt-get install python3-pip ffmpeg -y
 ```
 
-3. Setting up PIP
+3. Menyiapkan PIP
 ```console
 sudo pip3 install -U pip
 ```
 
-4. Clone the Repository
+4. Clone Repositori
 ```console
-git clone https://github.com/TheTeamAlexa/AlexaMusic && cd AlexaMusic
+git clone https://github.com/kotakbiasa/DeltaMusic && cd DeltaMusic
 ```
 
-5. Install Requirements
+5. Instal Persyaratan
 ```console
 pip install -r requirements.txt --break-system-packages
 ```
 
-6. Create .env  with sample.env
+6. Buat .env dengan sample.env
 ```console
 cp sample.env .env
 ```
-> Edit .env with your vars. 
+> Edit .env dengan variabel Anda. 
 
-7. Editing Vars:
+7. Mengedit Variabel:
 ```console
 vi .env
 ```
-> Edit .env with your values or you can simple copy a config from here and paste it to your notepad, then edit and paste there.
-> Press I button on keyboard to start editing.
-> Press Ctrl + C  once you are done with editing vars and type :wq to save .env or :qa to exit editing.
+> Edit .env dengan nilai Anda atau Anda dapat menyalin konfigurasi dari sini dan menempelkannya ke notepad Anda, lalu edit dan tempel di sana.
+> Tekan tombol I pada keyboard untuk mulai mengedit.
+> Tekan Ctrl + C setelah selesai mengedit variabel dan ketik :wq untuk menyimpan .env atau :qa untuk keluar dari pengeditan.
 
-8. Install Tmux : 
+8. Instal Tmux : 
 ```console
 sudo apt install tmux && tmux
 ```
 
-9. Finally Run Alexa Music Bot
+9. Akhirnya Jalankan Delta Stream Bot
 ```console
 bash start
 ```
 </details>
 
-<summary><b>ᴅᴇᴘʟᴏʏ ᴛᴏ ʜᴇʀᴏᴋᴜ</b></summary>
+<summary><b>Deploy ke Heroku</b></summary>
 <br>
 
-> ʜᴇʀᴏᴋᴜ ʜᴀs ᴛᴡᴏ ᴠᴀʀs[ ʜᴇʀᴏᴋᴜ_ᴀᴘɪ_ᴋᴇʏ & ʜᴇʀᴏᴋᴜ_ᴀᴘᴘ_ɴᴀᴍᴇ ] ғᴏʀ ᴜᴘᴅᴀᴛᴇʀ ᴛᴏ ᴡᴏʀᴋ. 
-> ʙʏ sᴇᴛᴛɪɴɢ ᴛʜᴏsᴇ ᴛᴡᴏ ᴠᴀʀs ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ ʟᴏɢs ᴏғ ʏᴏᴜʀ ʜᴇʀᴏᴋᴜ ᴀᴘᴘ, sᴇᴛ ᴠᴀʀ, ᴇᴅɪᴛ ᴠᴀʀ, ᴅᴇʟᴇᴛᴇ ᴠᴀʀs , ᴄʜᴇᴄᴋ ᴅʏɴᴏ ᴜsᴀɢᴇ ᴀɴᴅ ᴜᴘᴅᴀᴛᴇ ʙᴏᴛ. 
-> ᴛʜᴏsᴇ ᴛᴡᴏ ᴠᴀʀs ᴀʀᴇ ɴᴏᴛ ᴍᴀɴᴅᴀᴛᴏʀʏ, ʏᴏᴜ ᴄᴀɴ ʟᴇᴀᴠᴇ ᴛʜᴇᴍ ʙʟᴀɴᴋ ᴛᴏᴏ. 
+> Heroku memiliki dua variabel [HEROKU_API_KEY & HEROKU_APP_NAME] untuk updater agar berfungsi. 
+> Dengan mengatur dua variabel tersebut, Anda dapat mendapatkan log aplikasi Heroku Anda, mengatur variabel, mengedit variabel, menghapus variabel, memeriksa penggunaan dyno, dan memperbarui bot. 
+> Dua variabel tersebut tidak wajib, Anda juga dapat membiarkannya kosong. 
     
-<h4> ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴀʟᴇxᴀ ᴏɴ ʜᴇʀᴏᴋᴜ</h4>    
-<p><a href="https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FTheTeamAlexa%2FAlexaMusic"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="200"/></a></p>
+<h4> Klik tombol di bawah ini untuk mendeply Delta di Heroku</h4>    
+<p><a href="https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Fkotakbiasa%2FDeltaMusic"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="200"/></a></p>
 
-<h4>ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ɪꜰ ʏᴏᴜ ᴀʀᴇ ꜰᴀᴄɪɴɢ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ ᴏʀ  ᴀᴄᴄᴏᴜɴᴛ sᴜsᴘᴇɴsɪᴏɴ ɪssᴜᴇ ᴛᴏ ʙʏᴘᴀss ᴀɴʏ ʀᴇsᴛʀɪᴄᴛɪᴏɴ ᴏɴ ʜᴇʀᴏᴋᴜ ᴏʀ ʀᴀɪʟᴡᴇʏ</h4>    
-<p><a href="https://github.com/TheTeamAlexa/AlexaMusic-Bypass"><img src="https://img.shields.io/badge/Alexa-Music%20Bypass-blue.svg?style=for-the-badge&logo=GitHub"></a></p>
+<h4>Klik tombol di bawah ini jika Anda menghadapi masalah atau masalah penangguhan akun untuk melewati pembatasan apa pun di Heroku atau Railway</h4>    
+<p><a href="https://github.com/kotakbiasa/DeltaMusic-Bypass"><img src="https://img.shields.io/badge/Delta-Music%20Bypass-blue.svg?style=for-the-badge&logo=GitHub"></a></p>
 <br>
 
-<summary><b>sᴄᴀʟɪɴɢᴏ</b></summary>
+<summary><b>Scalingo</b></summary>
 <br>
-ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴅᴇᴘʟᴏʏ ᴀʟᴇxᴀ ᴍᴜsɪᴄ ᴏɴ sᴄᴀʟɪɴɢᴏ ɪɴᴛʀᴏᴅᴜᴄᴇᴅ ʙʏ @ITZ-ZAID
+Sekarang Anda dapat mendeply Delta Stream di Scalingo yang diperkenalkan oleh @ITZ-ZAID
         
-<p><a href="https://my.scalingo.com/deploy?template=https://github.com/TheTeamAlexa/AlexaMusic"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
+<p><a href="https://my.scalingo.com/deploy?template=https://github.com/kotakbiasa/DeltaMusic"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
 
-<h1 align="center"><b>❤️ ᴏᴡɴᴇʀ ᴀɴᴅ ᴄʀᴇᴅɪᴛ ❤️</b></h1>
+<h1 align="center"><b>Pemilik dan Kredit</b></h1>
 <details>
-<summary><b>ᴄʀᴇᴅɪᴛ</b></summary>
+<summary><b>Kredit</b></summary>
 <br>
 
-## sᴘᴇᴄɪᴀʟ ᴄʀᴇᴅɪᴛ
+## Kredit Khusus
 
-- [ᴀsᴀᴅ ᴀʟɪ](https://t.me/Dr_Asad_Ali)
-- [ʟᴏɢɪ ʟᴀʙ](https://github.com/LOGI-LAB)
-- [ʜᴀʀsʜɪᴛ](https://t.me/HarshitSharma361)
-- [ᴋsᴋ](https://github.com/KSKOP69) - For upgrading Alexa to Pyrogram latest version.
-- [ᴀʙʜɪᴍᴀɴᴜ](https://t.me/btwAbhimanyu)
-- [ʏᴜᴋᴋɪ](https://github.com/NotReallyShikhar)
-- [ᴀɴᴏɴʏᴍᴏᴜs](https://github.com/AnonymousX1025)
+- [Asad Ali](https://t.me/Dr_Asad_Ali)
+- [Logi Lab](https://github.com/LOGI-LAB)
+- [Harshit](https://t.me/HarshitSharma361)
+- [KSK](https://github.com/KSKOP69) - Untuk meningkatkan Delta ke versi terbaru Pyrogram.
+- [Abhimanyu](https://t.me/btwAbhimanyu)
+- [Yukki](https://github.com/NotReallyShikhar)
+- [Anonymous](https://github.com/AnonymousX1025)
 </details>
 
 <details>
-<summary><b>ʙʀᴏᴛʜᴇʀ</b></summary>
+<summary><b>Saudara</b></summary>
 <br>
 
-- [ᴀʙʜɪᴍᴀɴᴜ](https://t.me/btwAbhimanyu)
-- [ᴋsᴋ](https://t.me/EVERYONExKSK)
+- [Abhimanyu](https://t.me/btwAbhimanyu)
+- [KSK](https://t.me/EVERYONExKSK)
 
 </details>
 
 <details>
-<summary><b>sᴜᴘᴘᴏʀᴛ</b></summary>
+<summary><b>Dukungan</b></summary>
 <br>
 
-# ❤️ Support<
+# Dukungan
 <a href="https://t.me/Alexa_BotUpdates"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 <a href="https://t.me/Shayri_Music_Lovers"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 <a href="https://t.me/Give_Me_Heart"><img src="https://img.shields.io/badge/Give-Me%20Heart-blue.svg?logo=telegram"></a>
@@ -292,13 +290,13 @@ bash start
 </details>
 
 
-<h1 align="center"><b>❤️ ᴀᴄᴋɴᴏᴡʟᴇᴅɢᴇᴍᴇɴᴛs ❤️</b></h1>
+<h1 align="center"><b>Pengakuan</b></h1>
 
 <details>
-<summary><b>ʟɪʙʀᴀʀɪᴇs</b></summary>
+<summary><b>Perpustakaan</b></summary>
 <br>
 
-ᴛʜᴀɴᴋs ᴛᴏ ᴀʟʟ ᴏғ ʏᴏᴜ ғᴏʀ ᴜsɪɴɢ ᴀɴᴅ ᴍᴀᴋɪɴɢ ᴀʟᴇxᴀ:
+Terima kasih kepada Anda semua karena telah menggunakan dan membuat Delta:
 
 - [Pyrogram](https://github.com/pyrogram)
 - [Py-Tgcalls](https://pypi.org/project/py-tgcalls)
@@ -314,13 +312,13 @@ bash start
 </p>
 
 
-### Asad– History
+### Asad– Sejarah
 
 <a href="https://www.youtube.com/JankariKiDuniya"><img src="https://img.shields.io/badge/Join-Subscribe%20Support-blue.svg?style=for-the-badge&logo=YouTube"></a>
 
 
-> ⭐️ Thanks to everyone for using Alexa, 🤭 That is the greatest pleasure we have !
+> Terima kasih kepada semua orang yang menggunakan Delta, Itu adalah kesenangan terbesar yang kami miliki!
 
-### 📊 Repo Views Counter
+### Penghitung Tampilan Repo
 
 ![Views](https://profile-counter.glitch.me/AlexaMusic/count.svg)
