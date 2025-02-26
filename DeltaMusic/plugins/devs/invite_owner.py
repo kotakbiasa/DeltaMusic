@@ -4,10 +4,7 @@ from DeltaMusic import app
 from DeltaMusic.misc import SUDOERS
 from config import OWNER_ID  # Menggunakan SUDOERS dari config.py
 
-# Gabungkan OWNER_ID dan SUDOERS menjadi satu set pengguna yang diizinkan
-ALLOWED_USERS = {OWNER_ID} | set(SUDOERS)
-
-@app.on_message(filters.command("inviteme") & filters.user(ALLOWED_USERS))
+@app.on_message(filters.command("inviteme") & filters.user(SUDOERS))
 async def inviteme_func(_, message: Message):
     if len(message.command) != 2:
         return await message.reply_text(
