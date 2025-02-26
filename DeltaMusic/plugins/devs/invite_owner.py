@@ -5,15 +5,15 @@ from DeltaMusic import app
 from config import OWNER_ID
 
 
-@app.on_message(filters.command("ownerjoin") & filters.user(OWNER_ID))
-async def invite_owner(client, message: Message):
-    if len(message.command) < 2:
+@app.on_message(filters.command("inviteme") & filters.user(OWNER_ID))
+async def inviteme_func(_, message: Message):
+    if len(message.command) != 2:
         return await message.reply_text(
-            "Berikan tautan atau username grup yang ingin Anda undang!"
+            "<b>Gunakan Perintah :</b>\n/inviteme [username atau id group]"
         )
+    chat = message.text.split(None, 2)[1]
     try:
-        link = message.text.split(None, 1)[1]
-        await client.join_chat(link)
-        await message.reply_text("Berhasil bergabung ke grup!")
+        await app.add_chat_member(chat, message.from_user.id)
     except Exception as e:
-        await message.reply_text(f"Gagal bergabung ke grup!\n\n**Error:** {e}")
+        return await message.reply_text(f"<b>ERROR :</b>\n{e}")
+    await message.reply_text("<b>Berhasil Bergabung Ke Group</b>")
