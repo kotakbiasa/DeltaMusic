@@ -1,7 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 from DeltaMusic import app
-from config import OWNER_ID, SUDOERS  # Menggunakan SUDOERS dari config.py
+from DeltaMusic.misc import SUDOERS
+from config import OWNER_ID  # Menggunakan SUDOERS dari config.py
 
 # Gabungkan OWNER_ID dan SUDOERS menjadi satu set pengguna yang diizinkan
 ALLOWED_USERS = {OWNER_ID} | set(SUDOERS)
@@ -29,5 +30,4 @@ async def inviteme_func(_, message: Message):
         await message.reply_text("<b>Berhasil Bergabung ke Grup</b>")
     except Exception as e:
         return await message.reply_text(f"<b>ERROR :</b>\n{e}")
-    
     
