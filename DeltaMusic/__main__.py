@@ -43,7 +43,7 @@ async def init() -> None:
         pass
     await app.start()
     for module in ALL_MODULES:
-        importlib.import_module("AlexaMusic.plugins" + module)
+        importlib.import_module("DeltaMusic.plugins" + module)
     LOGGER("DeltaMusic.plugins").info("Modul yang Diperlukan Berhasil Diimpor.")
     await userbot.start()
     await Delta.start()
