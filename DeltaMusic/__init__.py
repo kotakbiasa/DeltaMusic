@@ -31,7 +31,7 @@ dbb()
 heroku()
 
 # Cookies
-# save_cookies()
+save_cookies()
 
 # Bot Client
 app = DeltaBot()
